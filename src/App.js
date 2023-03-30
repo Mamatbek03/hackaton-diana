@@ -1,10 +1,12 @@
 import React from "react";
-import Cart from "./Cart";
+// import Cart from "./Cart";
+import AddProduct from "./components/Products/AddProduct/AddProduct";
 
 const App = () => {
   return (
     <div>
-      <Cart />
+      {/* <Cart /> */}
+      <AddProduct />
     </div>
   );
 };
