@@ -1,3 +1,55 @@
 .header {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+nav {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  width: 100px;
+}
+
+.search {
+  width: 250px;
+  height: 30px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 40px;
+  border-color: black;
+  margin-left: 30px;
+}
+
+.inp-search {
+  height: 13px;
+  border: none;
+  background-color: transparent;
+}
+
+.inp-search:focus {
+  outline: none !important;
+}
+
+.users_name {
+  margin-left: 30px;
+  display: flex;
+  width: 80px;
+}
+
+.lupa {
+  width: 20px;
 }
