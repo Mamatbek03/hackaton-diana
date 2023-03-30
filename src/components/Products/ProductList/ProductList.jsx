@@ -1,7 +1,12 @@
+import { Container } from "@mui/system";
 import React from "react";
 
 const ProductList = () => {
-  return <div>ProductList</div>;
+  return (
+    <Box>
+      <Container>sdf</Container>
+    </Box>
+  );
 };
 
 export default ProductList;
