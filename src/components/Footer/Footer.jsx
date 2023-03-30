@@ -17,8 +17,8 @@ const Footer = () => {
             </h3>
             <span>Sign up for free! </span>
             <button>Sign up</button>
-            <img className="logo-footer" src={logo} alt="" />
           </div>
+          <img className="logo-footer" src={logo} alt="" />
         </div>
 
         <div className="footer-black-right">
