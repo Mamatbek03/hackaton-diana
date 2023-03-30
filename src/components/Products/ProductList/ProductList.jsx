@@ -1,10 +1,12 @@
-import { Container } from "@mui/system";
+import { Box, Container } from "@mui/system";
 import React from "react";
+import AddProduct from "../AddProduct/AddProduct";
 
 const ProductList = () => {
   return (
     <Box>
-      <Container>sdf</Container>
+      <AddProduct />
+      <Container>vzv</Container>
     </Box>
   );
 };
