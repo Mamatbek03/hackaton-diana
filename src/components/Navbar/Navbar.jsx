@@ -9,16 +9,16 @@ import lupa from "./Navbarimages/icon.png";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 
 const pages = [
-  { name: "Category", link: "/products", id: 1 },
-  { name: "AboutUs", link: "/AboutUs", id: 2 },
-  { name: "Contacts", link: "/contacts", id: 3 },
+  { name: <img className="logo" src={logo} alt="" />, link: "/home", id: 1 },
+  { name: "Catalog", link: "/products", id: 2 },
+  { name: "AboutUs", link: "/AboutUs", id: 3 },
+  { name: "Contacts", link: "/contacts", id: 4 },
   { name: "Admin Page", link: "/admin-page", id: 5 },
 ];
 
 const Navbar = () => {
   return (
     <div className="header">
-      <img className="logo" src={logo} alt="" />
       <nav>
         {pages.map((page) => (
           <Link key={page.id} to={page.link}>
