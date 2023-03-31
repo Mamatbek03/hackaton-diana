@@ -46,8 +46,8 @@ export default function ProductCard({ product }) {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={product.name}
+        subheader={Date.now()}
       />
       <CardMedia
         component="img"
