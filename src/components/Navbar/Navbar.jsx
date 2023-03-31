@@ -7,6 +7,7 @@ import { Badge, IconButton } from "@mui/material";
 import { ExitToAppOutlined } from "@mui/icons-material";
 import lupa from "./Navbarimages/icon.png";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import AuthGoogle from "../AuthGoogle/AuthGoogle";
 
 const pages = [
   { name: <img className="logo" src={logo} alt="" />, link: "/home", id: 1 },
@@ -42,7 +43,7 @@ const Navbar = () => {
         >
           <ShoppingCartCheckoutIcon />
         </Badge>
-        <BackgroundLetterAvatars />
+        <AuthGoogle />
         <IconButton>
           <ExitToAppOutlined sx={{ width: 30, height: 30, marginLeft: 1 }} />
         </IconButton>
