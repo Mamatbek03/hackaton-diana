@@ -2,30 +2,28 @@
     background-color: rgb(219, 219, 219);
    width: 100%;
    height: auto;
-  
+  display: block;
+  justify-content: center;
+  margin-top: -50px;
 }
-.HomePage-content{
-    margin-left: 3%;
-   align-items: center;
-    position: relative;
-    top: -180px;
-}
+
 .HomePage-h3{
     display: flex;
-    gap: 25px;
+   
     font-size: 170px;
     font-family: 'Rubik';
     margin-left: 7%;
     font-weight: lighter;
-   margin-top: 0;
-   padding-top: 0;
+    margin: 100px;
 }
-.blue-h3{
-    color:  rgb(109, 111, 249);;
+.DoItRight{
+    width: 90%;
+    margin-left: 6%;
+    margin-top: 30px;
 }
 .HomePagePic1{
     margin-left: 6%;
-    margin-top: -180px;
+  
     width: 85%;
 }
 .HomePage-pic-text{
@@ -39,10 +37,14 @@
     top: -300px;
     color: white;
 }
+
 .HP-block1-btn{
     width: 150px;
     margin-top: 20px;
     margin-left: -2px;
     border-radius: 10px;
     background-color: rgb(109, 111, 249);
+}
+.HomePage-block1{
+    margin-left: 5%;
 }
