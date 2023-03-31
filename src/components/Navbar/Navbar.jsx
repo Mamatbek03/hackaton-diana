@@ -3,9 +3,10 @@ import logo from "./Navbarimages/KicksLogo.png";
 import { Link } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
-import { IconButton } from "@mui/material";
+import { Badge, IconButton } from "@mui/material";
 import { ExitToAppOutlined } from "@mui/icons-material";
 import lupa from "./Navbarimages/icon.png";
+import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 
 const pages = [
   { name: "Category", link: "/products", id: 1 },
@@ -34,6 +35,13 @@ const Navbar = () => {
         <img className="lupa" src={lupa} alt="" />
       </div>
       <div className="users_name">
+        <Badge
+          sx={{ width: 30, height: 30, marginTop: 1, marginRight: 2 }}
+          badgeContent={4}
+          color="primary"
+        >
+          <ShoppingCartCheckoutIcon />
+        </Badge>
         <BackgroundLetterAvatars />
         <IconButton>
           <ExitToAppOutlined sx={{ width: 30, height: 30, marginLeft: 1 }} />
