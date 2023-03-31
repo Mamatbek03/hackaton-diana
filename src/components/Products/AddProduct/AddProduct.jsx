@@ -17,9 +17,6 @@ const AddProduct = () => {
     image: "",
   });
 
-  // !
-  const { addProduct } = useProduct();
-  // !
   function handleInput(e) {
     if (e.target.name === "size" || e.target.name === "size") {
       let obj = { ...product, [e.target.name]: Number(e.target.value) };
@@ -98,13 +95,7 @@ const AddProduct = () => {
           name="image"
           size="small"
         />
-        <Button
-          onClick={() => {
-            addProduct(product);
-          }}
-        >
-          Add Product
-        </Button>
+        <Button>Add Product</Button>
       </Container>
     </Box>
   );
