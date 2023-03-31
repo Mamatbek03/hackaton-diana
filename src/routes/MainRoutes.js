@@ -5,6 +5,7 @@ import Contacts from "../components/Contacts/Contacts";
 import Logo from "../components/Logo/Logo";
 import ProductList from "../components/Products/ProductList/ProductList";
 import AdminPage from "../Pages/AdminPage/AdminPage";
+import HomePage from "../Pages/HomePage/HomePage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -12,6 +13,7 @@ const MainRoutes = () => {
     { link: "/aboutUs", element: <AboutUs />, id: 2 },
     { link: "/contacts", element: <Contacts />, id: 3 },
     { link: "/admin-page", element: <AdminPage />, id: 4 },
+    { link: "/home", element: <HomePage />, id: 5 },
   ];
   return (
     <>

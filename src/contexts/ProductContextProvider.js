@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { API } from "../helpers/consts";
+import { API, PRODUCTS } from "../helpers/consts";
+import { calcSubPrice } from "../helpers/functions";
 
 export const productContext = createContext();
 
@@ -38,13 +39,16 @@ const ProductContextProvider = ({ children }) => {
   }
   // ! delete
   async function deleteProduct(id) {
-    await axios.delete(API);
+    await axios.delete(`${API}/${id}`);
+    getProducts();
   }
 
   const values = {
+    deleteProduct,
     addProduct,
     getProducts,
     products: state.products,
+    addProduct,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

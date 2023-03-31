@@ -1,374 +1,84 @@
 {
   "products": [
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 42,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 111,
-      "description": "dfsdFV",
-      "image": "dfvsfv",
-      "id": 1
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "dc",
-      "gender": "",
-      "size": 0,
-      "color": "",
-      "price": 0,
-      "description": "",
-      "image": "",
-      "id": 2
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
+      "color": "red",
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     },
     {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
+      "name": "Diana",
+      "gender": "fghj",
+      "size": null,
       "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
-    },
-    {
-      "name": "MAMATBEK",
-      "gender": "man",
-      "size": 21,
-      "color": "red",
-      "price": 221,
-      "description": "fddf",
-      "image": "bsdf",
-      "id": 3
+      "price": 56789,
+      "description": "fghjk",
+      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
+      "id": 5
     }
   ]
 }
