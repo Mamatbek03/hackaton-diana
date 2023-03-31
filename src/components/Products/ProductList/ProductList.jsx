@@ -7,15 +7,18 @@ import ProductCard from "../ProductCard/ProductCard";
 
 const ProductList = () => {
   const { getProducts, products } = useProduct();
+  const [page, setPage] = useState(1);
+  const shoesPerPage = 9;
+  const count = Math.ceil(products.length / shoesPerPage);
+
   useEffect(() => {
     getProducts();
   }, []);
-  const [page, setPage] = useState(1);
+
   function handlePage(e) {
     setPage(e.target.value);
   }
-  const shoesPerPage = 9;
-  const count = Math.ceil(products.length / shoesPerPage);
+
   function currentData() {
     let start = (page - 1) * shoesPerPage;
     let end = start + shoesPerPage;
@@ -33,7 +36,7 @@ const ProductList = () => {
           <Pagination onChange={handlePage} count={count} shape="rounded" />
           <Pagination
             onChange={handlePage}
-            count={10}
+            count={count}
             variant="outlined"
             shape="rounded"
           />
