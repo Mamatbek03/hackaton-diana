@@ -5,6 +5,7 @@ import Contacts from "../components/Contacts/Contacts";
 import Logo from "../components/Logo/Logo";
 import ProductList from "../components/Products/ProductList/ProductList";
 import AdminPage from "../Pages/AdminPage/AdminPage";
+import EditProductPage from "../Pages/EditProductPage/EditProductPage";
 import HomePage from "../Pages/HomePage/HomePage";
 
 const MainRoutes = () => {
@@ -14,6 +15,7 @@ const MainRoutes = () => {
     { link: "/contacts", element: <Contacts />, id: 3 },
     { link: "/admin-page", element: <AdminPage />, id: 4 },
     { link: "/home", element: <HomePage />, id: 5 },
+    { link: "/edit:id", element: <EditProductPage />, id: 5 },
   ];
   return (
     <>
