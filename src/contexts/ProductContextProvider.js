@@ -37,8 +37,14 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
     console.log(product);
   }
+  // ! delete
+  async function deleteProduct(id) {
+    await axios.delete(`${API}/${id}`);
+    getProducts();
+  }
 
   const values = {
+    deleteProduct,
     addProduct,
     getProducts,
     products: state.products,

@@ -27,13 +27,11 @@ const ProductList = () => {
 
   return (
     <Box>
-      <AddProduct />
       <Container>
         {currentData().map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
         <Stack spacing={2}>
-          <Pagination onChange={handlePage} count={count} shape="rounded" />
           <Pagination
             onChange={handlePage}
             count={count}
