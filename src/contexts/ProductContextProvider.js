@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { API } from "../helpers/consts";
+import { API, PRODUCTS } from "../helpers/consts";
+import { calcSubPrice } from "../helpers/functions";
 
 export const productContext = createContext();
 
@@ -41,6 +42,7 @@ const ProductContextProvider = ({ children }) => {
     addProduct,
     getProducts,
     products: state.products,
+    addProduct,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
