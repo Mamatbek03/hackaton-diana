@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, TextField } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
+import { useProduct } from "../../../contexts/ProductContextProvider";
 // import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
@@ -16,6 +17,9 @@ const AddProduct = () => {
     image: "",
   });
 
+  // !
+  const { addProduct } = useProduct();
+  // !
   function handleInput(e) {
     if (e.target.name === "size" || e.target.name === "size") {
       let obj = { ...product, [e.target.name]: Number(e.target.value) };
@@ -24,7 +28,7 @@ const AddProduct = () => {
       let obj = { ...product, [e.target.name]: e.target.value };
       setProduct(obj);
     }
-    console.log(product);
+    // console.log(product);
   }
 
   return (
@@ -94,7 +98,13 @@ const AddProduct = () => {
           name="image"
           size="small"
         />
-        <Button>Add Product</Button>
+        <Button
+          onClick={() => {
+            addProduct(product);
+          }}
+        >
+          Add Product
+        </Button>
       </Container>
     </Box>
   );

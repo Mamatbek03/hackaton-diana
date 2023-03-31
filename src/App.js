@@ -11,7 +11,7 @@ const App = () => {
     <ProductContextProvider>
       {/* <Cart /> */}
       <Navbar />
-      <HomePage />
+      {/* <HomePage /> */}
       <MainRoutes />
       <Footer />
     </ProductContextProvider>

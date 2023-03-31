@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
-import { PRODUCTS } from "../helpers/consts";
+import { API, PRODUCTS } from "../helpers/consts";
 import { calcSubPrice } from "../helpers/functions";
 
 export const productContext = createContext();
@@ -60,9 +61,17 @@ const ProductContextProvider = ({ children }) => {
     products.totalPrice = calcSubPrice(products.shoes);
   }
 
+  // !
+  const addProduct = async (newProduct) => {
+    await axios.post(API, newProduct);
+    getProducts();
+  };
+  // !
+
   const values = {
     getProducts,
     products: state.products,
+    addProduct,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
