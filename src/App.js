@@ -3,6 +3,7 @@ import Cart from "./Cart";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import ProductContextProvider from "./contexts/ProductContextProvider";
+import HomePage from "./Pages/HomePage/HomePage";
 import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
@@ -10,8 +11,9 @@ const App = () => {
     <ProductContextProvider>
       {/* <Cart /> */}
       <Navbar />
-      <Footer />
+      <HomePage />
       <MainRoutes />
+      <Footer />
     </ProductContextProvider>
   );
 };
