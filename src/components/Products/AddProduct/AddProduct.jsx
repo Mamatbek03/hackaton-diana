@@ -1,10 +1,13 @@
 import { Box, Button, FormControl, TextField } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { useProduct } from "../../../contexts/ProductContextProvider";
 
 const AddProduct = () => {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const { addProduct } = useProduct();
 
   const [product, setProduct] = useState({
     name: "",
@@ -17,15 +20,18 @@ const AddProduct = () => {
   });
 
   function handleInput(e) {
-    if (e.target.name === "size" || e.target.name === "size") {
+    if (e.target.name === "size") {
+      let obj = { ...product, [e.target.name]: Number(e.target.value) };
+      setProduct(obj);
+    } else if (e.target.name === "price") {
       let obj = { ...product, [e.target.name]: Number(e.target.value) };
       setProduct(obj);
     } else {
       let obj = { ...product, [e.target.name]: e.target.value };
       setProduct(obj);
     }
-    console.log(product);
   }
+  console.log(product);
 
   return (
     <Box>
@@ -94,7 +100,17 @@ const AddProduct = () => {
           name="image"
           size="small"
         />
-        <Button>Add Product</Button>
+        <Button
+          className="admin_btn"
+          onClick={() => {
+            addProduct(product);
+            navigate("/products");
+          }}
+          size="large"
+          variant="outlined"
+        >
+          Add Product
+        </Button>
       </Container>
     </Box>
   );

@@ -1,3 +1,34 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "MAMATBEK",
+      "gender": "man",
+      "size": 42,
+      "color": "red",
+      "price": 111,
+      "description": "dfsdFV",
+      "image": "dfvsfv",
+      "id": 1
+    },
+    {
+      "name": "dc",
+      "gender": "",
+      "size": 0,
+      "color": "",
+      "price": 0,
+      "description": "",
+      "image": "",
+      "id": 2
+    },
+    {
+      "name": "MAMATBEK",
+      "gender": "man",
+      "size": 21,
+      "color": "red",
+      "price": 221,
+      "description": "fddf",
+      "image": "bsdf",
+      "id": 3
+    }
+  ]
 }
