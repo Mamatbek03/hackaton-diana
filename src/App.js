@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import CardContextProvider from "./contexts/CardContextProvider";
 import ProductContextProvider from "./contexts/ProductContextProvider";
 import MainRoutes from "./routes/MainRoutes";
+import HomePage from "./Pages/HomePage/HomePage";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <ProductContextProvider>
         {/* <Cart /> */}
         <Navbar />
+        <HomePage />
         <MainRoutes />
         <Footer />
       </ProductContextProvider>

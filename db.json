@@ -81,13 +81,13 @@
       "id": 5
     },
     {
-      "name": "",
-      "gender": "",
-      "size": 0,
-      "color": "",
-      "price": 0,
-      "description": "",
-      "image": "",
+      "name": "fgh",
+      "gender": "hhhh",
+      "size": null,
+      "color": "green",
+      "price": 890,
+      "description": "tyul",
+      "image": "7890",
       "id": 6
     }
   ]

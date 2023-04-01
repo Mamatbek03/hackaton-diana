@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 import AddProduct from "../AddProduct/AddProduct";
 import ProductCard from "../ProductCard/ProductCard";
+import SideBar from "../SideBar/SideBar";
 
 const ProductList = () => {
   const { getProducts, products } = useProduct();
@@ -27,6 +28,7 @@ const ProductList = () => {
 
   return (
     <Box>
+      <SideBar />
       <Container>
         {currentData().map((product) => (
           <ProductCard key={product.id} product={product} />
