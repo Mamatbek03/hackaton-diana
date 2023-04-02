@@ -6,31 +6,43 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useProduct } from "../../../contexts/ProductContextProvider";
+import { useNavigate } from "react-router-dom";
+import { Container } from "@mui/material";
 
 export default function ProductCard({ product }) {
+  const navigate = useNavigate();
   const { deleteProduct } = useProduct();
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image={product.image}
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {product.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {product.color}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Details</Button>
-        <Button size="small">Edit</Button>
-        <Button onClick={() => deleteProduct(product.id)} size="small">
-          Delete
-        </Button>
-      </CardActions>
-    </Card>
+    <Container>
+      <Card sx={{ maxWidth: 345, margin: "30px" }}>
+        <CardMedia
+          sx={{ height: 300 }}
+          image={product.image}
+          title="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {product.name}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {product.color}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <Button size="small">Details</Button>
+          <Button
+            onClick={() => {
+              navigate(`/edit/${product.id}`);
+            }}
+            size="small"
+          >
+            Edit
+          </Button>
+          <Button onClick={() => deleteProduct(product.id)} size="small">
+            Delete
+          </Button>
+        </CardActions>
+      </Card>
+    </Container>
   );
 }
