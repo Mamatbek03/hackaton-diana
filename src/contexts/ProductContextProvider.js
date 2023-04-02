@@ -79,6 +79,7 @@ const ProductContextProvider = ({ children }) => {
 
   const values = {
     fetchByParams,
+
     saveEditProduct,
     getProductForEdit,
     productForEdit: state.productForEdit,
@@ -88,6 +89,7 @@ const ProductContextProvider = ({ children }) => {
     getProducts,
     products: state.products,
     fetchByParams,
+
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

@@ -9,9 +9,11 @@ import { useProduct } from "../../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Container } from "@mui/material";
 
+
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProduct();
+  const { addProductToCart, checkProductInCart } = useCart();
   return (
     <Container>
       <Card sx={{ maxWidth: 345, margin: "30px" }}>
@@ -44,5 +46,6 @@ export default function ProductCard({ product }) {
         </CardActions>
       </Card>
     </Container>
+
   );
 }
