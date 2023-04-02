@@ -37,13 +37,8 @@ export default function ProductCard({ product }) {
             color={checkProductInCart(product.id) ? "primary" : ""}
           />
         </IconButton>
-        <Button size="small">Edit</Button>
-        <Button
-          onClick={() => {
-            navigate(`/edit/${product.id}`);
-          }}
-          size="small"
-        >
+        {/* <Button size="small">Edit</Button> */}
+        <Button onClick={() => navigate(`/edit/${product.id}`)} size="small">
           Edit
         </Button>
         <Button onClick={() => deleteProduct(product.id)} size="small">

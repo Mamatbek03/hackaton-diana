@@ -16,7 +16,7 @@ const EditProduct = () => {
 
   useEffect(() => {
     setEditProduct(productForEdit);
-  }, []);
+  }, [productForEdit]);
 
   function handleInput(e) {
     if (e.target.name === "size") {
@@ -37,7 +37,7 @@ const EditProduct = () => {
       <Container>
         <h1>Admin Page</h1>
         <TextField
-          value={editProduct ? editProduct.name : ""}
+          value={editProduct.name || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -115,7 +115,7 @@ const EditProduct = () => {
           size="large"
           variant="outlined"
         >
-          save Product's changes
+          save Changes
         </Button>
       </Container>
     </Box>
