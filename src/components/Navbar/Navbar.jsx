@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./Navbarimages/KicksLogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
 import { Badge, IconButton } from "@mui/material";
@@ -18,6 +18,7 @@ const pages = [
 ];
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className="header">
       <nav>
@@ -41,7 +42,7 @@ const Navbar = () => {
           badgeContent={4}
           color="primary"
         >
-          <ShoppingCartCheckoutIcon />
+          <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
         </Badge>
         <AuthGoogle />
         <IconButton>
