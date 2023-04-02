@@ -11,84 +11,34 @@
       "id": 5
     },
     {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "Diana",
-      "gender": "fghj",
-      "size": null,
-      "color": "red",
-      "price": 56789,
-      "description": "fghjk",
-      "image": "https://img5.lalafo.com/i/posters/original/f1/ca/4c/280fff40e321ca9a0fe1dc759f.jpeg",
-      "id": 5
-    },
-    {
-      "name": "",
-      "gender": "",
-      "size": 0,
-      "color": "",
-      "price": 0,
-      "description": "",
-      "image": "",
+      "name": "nike",
+      "gender": "girl",
+      "size": 56,
+      "color": "green",
+      "price": 5678,
+      "description": "ahn",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/d5f84f54-480d-4186-a0ea-3fea15f59d67/air-force-1-high-se-womens-shoes-X6v8pV.png",
       "id": 6
+    },
+    {
+      "name": "marlen",
+      "gender": "male",
+      "size": 56,
+      "color": "blue",
+      "price": 670,
+      "description": "ghjkl",
+      "image": "gghjkl",
+      "id": 8
+    },
+    {
+      "name": "Saadat",
+      "gender": "woman",
+      "size": null,
+      "color": "pink",
+      "price": 100000000000000,
+      "description": "ahn",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXNtA_reXqsChVloWfwyzb4k6jkofXPmabnA&usqp=CAU",
+      "id": 9
     }
   ]
 }
