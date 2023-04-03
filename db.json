@@ -3,7 +3,7 @@
     {
       "name": "shoe",
       "gender": "male",
-      "size": 42,
+      "size": 41,
       "color": "white",
       "price": 120,
       "description": "good",
@@ -30,6 +30,5 @@
       "image": "https://i.pinimg.com/236x/a9/71/11/a971111551617821bf84253f0d011490.jpg",
       "id": 3
     }
-
   ]
 }
