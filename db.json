@@ -1,35 +1,4 @@
 {
   "products": [
-    {
-      "name": "shoe",
-      "gender": "male",
-      "size": 42,
-      "color": "white",
-      "price": 120,
-      "description": "good",
-      "image": "https://i.pinimg.com/236x/ab/01/7c/ab017c3729411ea2832361c6bb9e269b.jpg",
-      "id": 1
-    },
-    {
-      "name": "shoe 2",
-      "gender": "woman",
-      "size": 37,
-      "color": "green",
-      "price": 120,
-      "description": "good",
-      "image": "https://i.pinimg.com/236x/1e/5f/3f/1e5f3f7a24d6c38ea1fbe9168393abe5.jpg",
-      "id": 2
-    },
-    {
-      "name": "shoe 3",
-      "gender": "woman",
-      "size": 35,
-      "color": "black",
-      "price": 220,
-      "description": "black",
-      "image": "https://i.pinimg.com/236x/a9/71/11/a971111551617821bf84253f0d011490.jpg",
-      "id": 3
-    }
-
   ]
 }
