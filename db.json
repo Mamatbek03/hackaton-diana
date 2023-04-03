@@ -19,6 +19,16 @@
       "description": "black",
       "image": "https://i.pinimg.com/236x/b0/62/19/b06219a37a27edc381ff79fe960d5c75.jpg",
       "id": 2
+    },
+    {
+      "name": "boots",
+      "gender": "woman",
+      "size": 39,
+      "color": "beige",
+      "price": 80,
+      "description": "good",
+      "image": "https://i.pinimg.com/236x/aa/97/74/aa97748573a0fac729b45cb1b705c4fd.jpg",
+      "id": 3
     }
   ]
 }
