@@ -38,7 +38,6 @@ const ProductContextProvider = ({ children }) => {
   async function addProduct(product) {
     await axios.post(API, product);
     getProducts();
-    console.log(product);
   }
   // ! delete
   async function deleteProduct(id) {
