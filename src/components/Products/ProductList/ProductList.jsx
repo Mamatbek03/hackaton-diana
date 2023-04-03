@@ -5,6 +5,7 @@ import { useProduct } from "../../../contexts/ProductContextProvider";
 import AddProduct from "../AddProduct/AddProduct";
 import ProductCard from "../ProductCard/ProductCard";
 import { useSearchParams } from "react-router-dom";
+import SideBar from "../SideBar/SideBar";
 
 const ProductList = () => {
   const { getProducts, products } = useProduct();
@@ -33,8 +34,15 @@ const ProductList = () => {
   }
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+      }}
+    >
       <Container>
+        <SideBar />
         {currentData().map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
