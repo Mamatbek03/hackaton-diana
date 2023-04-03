@@ -1,4 +1,34 @@
 {
   "products": [
+    {
+      "name": "Nike",
+      "gender": "woman",
+      "size": 37,
+      "color": "white",
+      "price": 60,
+      "description": "good",
+      "image": "https://i.pinimg.com/236x/96/1d/f2/961df29d38bda27dfe0a902c753244c8.jpg",
+      "id": 1
+    },
+    {
+      "name": "Nike",
+      "gender": "male",
+      "size": 41,
+      "color": "black",
+      "price": 80,
+      "description": "black",
+      "image": "https://i.pinimg.com/236x/b0/62/19/b06219a37a27edc381ff79fe960d5c75.jpg",
+      "id": 2
+    },
+    {
+      "name": "boots",
+      "gender": "woman",
+      "size": 39,
+      "color": "beige",
+      "price": 80,
+      "description": "good",
+      "image": "https://i.pinimg.com/236x/aa/97/74/aa97748573a0fac729b45cb1b705c4fd.jpg",
+      "id": 3
+    }
   ]
 }

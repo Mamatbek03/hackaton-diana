@@ -3,52 +3,70 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div>
-      <div class="about-us">
+      <div
+        class="about-us"
+        style={{
+          display: "flex",
+          paddingBottom: "10%",
+
+          backgroundColor: "rgb(219, 219, 219)",
+          marginTop: "-35px",
+          flexDirection: "column",
+          fontFamily: "sans-serif",
+        }}
+      >
         <div class="about-us-header">
-          <h2>О нас</h2>
+          <h2
+            style={{
+              fontSize: "50px",
+              color: "black",
+              fontFamily: "Rubik",
+              marginTop: "90px",
+            }}
+          >
+            About Us
+          </h2>
         </div>
-        <div class="about-us-content">
-          <div class="about-us-text">
-            <h3 class="aboutUs_h3">Наша история</h3>
-            <p>
-              "Мы - команда энтузиастов, которые разделяют страсть к кроссовкам.
-              Мы создали этот сайт, чтобы помочь людям находить лучшие модели по
-              выгодным ценам. Мы тесно сотрудничаем с производителями и гордимся
-              тем, что предлагаем широкий ассортимент кроссовок, которые
-              сочетают в себе стиль и комфорт."
-            </p>
+        <div
+          className="alltext"
+          style={{
+            display: "flex",
+            textAlign: "center",
+            width: "70%",
+            margin: "auto",
+          }}
+        >
+          <div class="about-us-content">
+            <div
+              class="about-us-text"
+              style={{
+                padding: "40px",
+              }}
+            >
+              <h3 class="aboutUs_h3">Our Story</h3>
+              <p>
+                "We are a team of enthusiasts who exude a passion for sneakers.
+                We review this site to help people find the best models by
+                favorable prices. We work closely with manufacturers and are
+                proud by offering a wide range of sneakers that combine style
+                and comfort."
+              </p>
 
-            <h3 class="aboutUs_h3"> Наша миссия</h3>
-            <p>
-              Мы стремимся предоставлять нашим клиентам лучшие продукты и
-              услуги, чтобы улучшить их жизнь и бизнес.
-            </p>
+              <h3 class="aboutUs_h3"> Our mission</h3>
+              <p>
+                We strive to provide our customers with the best products and
+                services to improve their lives and businesses.
+              </p>
 
-            <h3 class="aboutUs_h3">Наша команда</h3>
-            <p>
-              "Мы - команда профессионалов, которые разделяют страсть к
-              кроссовкам и моде. Наша команда включает в себя экспертов по
-              продажам, маркетингу, логистике и обслуживанию клиентов. Мы
-              работаем с целью обеспечить высочайший уровень обслуживания и
-              помочь нашим клиентам выбрать лучшие кроссовки по самой выгодной
-              цене."
-            </p>
-
-            <h3 class="aboutUs_h3">Наши ценности</h3>
-            <ul>
-              <li>Инновации</li>
-              <li>Качество</li>
-              <li>Профессионализм</li>
-              <li>Команда</li>
-              <li>Ответственность</li>
-            </ul>
-          </div>
-          <div class="about-us-image">
-            <img
-              class="img_about_us"
-              src="https://upload.wikimedia.org/wikipedia/ru/f/f3/%D0%90%D1%80%D1%82-%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_%D0%A1%D0%B0%D0%B3%D0%B8_%D0%91%D0%B5%D1%81%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9A%D0%92%D0%9C.jpeg"
-              alt="Команда нашей компании"
-            />
+              <h3 class="aboutUs_h3">Our Team</h3>
+              <p>
+                "We are a team of professionals who share a passion for sneakers
+                and fashion. Our team includes experts in sales, marketing,
+                logistics and customer service. We We work to provide the
+                highest level of service and help our customers to choose the
+                best running shoes at the best price price."
+              </p>
+            </div>
           </div>
         </div>
       </div>

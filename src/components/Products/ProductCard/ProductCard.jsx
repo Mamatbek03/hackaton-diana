@@ -14,11 +14,12 @@ export default function ProductCard({ product }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
+
   return (
     <Container>
-      <Card sx={{ maxWidth: 345, margin: "30px" }}>
+      <Card className="Card" style={{ width: "250px", margin: "10px" }}>
         <CardMedia
-          sx={{ height: 300 }}
+          sx={{ height: "200px ", width: "250px" }}
           image={product.image}
           title="green iguana"
         />
