@@ -8,7 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Container } from "@mui/material";
-
+import { useCart } from "../../../contexts/CartContextProvider";
 
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
@@ -46,6 +46,5 @@ export default function ProductCard({ product }) {
         </CardActions>
       </Card>
     </Container>
-
   );
 }

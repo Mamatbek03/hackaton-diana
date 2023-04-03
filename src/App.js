@@ -7,7 +7,8 @@ import ProductContextProvider from "./contexts/ProductContextProvider";
 import MainRoutes from "./routes/MainRoutes";
 import HomePage from "./Pages/HomePage/HomePage";
 
-
+const App = () => {
+  return (
     <CartContextProvider>
       <CardContextProvider>
         <ProductContextProvider>
