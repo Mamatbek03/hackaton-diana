@@ -27,7 +27,6 @@ export default function Cart() {
   useEffect(() => {
     getCart();
   }, []);
-  console.log(cart);
 
   const cartCleaner = () => {
     localStorage.removeItem("cart");
@@ -64,6 +63,7 @@ export default function Cart() {
                 min={1}
                 max={100}
                 onChange={(e) =>
+                  //  console.log(e.target.value)
                   changeProductCount(e.target.value, row.item.id)
                 }
                 value={row.count}

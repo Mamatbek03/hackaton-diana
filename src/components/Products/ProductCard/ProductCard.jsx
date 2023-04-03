@@ -9,13 +9,16 @@ import { useProduct } from "../../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
 import { Container } from "@mui/material";
 import { useCart } from "../../../contexts/CartContextProvider";
+import "./ProductCard.css";
+
 export default function ProductCard({ product }) {
   const navigate = useNavigate();
   const { deleteProduct } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
+
   return (
     <Container>
-      <Card sx={{ maxWidth: 345, margin: "30px" }}>
+      <Card className="Card" sx={{ maxWidth: "300px", margin: "30px" }}>
         <CardMedia
           sx={{ height: 300 }}
           image={product.image}
