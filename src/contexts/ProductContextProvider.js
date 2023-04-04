@@ -3,6 +3,7 @@ import React, { createContext, useContext, useReducer, useState } from "react";
 import { API, PRODUCTS } from "../helpers/consts";
 import { calcSubPrice } from "../helpers/functions";
 import { useNavigate } from "react-router-dom";
+import { async } from "q";
 
 export const productContext = createContext();
 
@@ -13,6 +14,7 @@ const INIT_STATE = {
   productForEdit: {},
   productsPerPage: [],
   productDetails: {},
+  productForReviews: {},
 };
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
@@ -24,6 +26,8 @@ function reducer(state = INIT_STATE, action) {
     case "GET_PRODUCTS_PER_PAGE":
       return { ...state, productsPerPage: action.payload };
     case "GET_PRODUCT_DETAILS":
+      return { ...state, productsPerPage: action.payload };
+    case "GET_PRODUCT_FOR_REVIEWS":
       return { ...state, productsPerPage: action.payload };
 
     default:
@@ -67,7 +71,7 @@ const ProductContextProvider = ({ children }) => {
     let { data } = await axios.get(API + "?_limit=9");
     dispatch({ type: "GET_PRODUCTS_PER_PAGE", payload: data });
   }
-  // ! get editing Product
+  // ! get one Product
   async function getProductForEdit(id) {
     let { data } = await axios.get(`${API}/${id}`);
     dispatch({ type: "GET_PRODUCT_FOR_EDIT", payload: data });
@@ -96,8 +100,38 @@ const ProductContextProvider = ({ children }) => {
     dispatch({ type: "GET_PRODUCT_DETAILS", payload: data });
   }
   console.log();
+  // ! review
+  function createStorage() {
+    if (!JSON.parse(localStorage.getItem("reviews"))) {
+      localStorage.setItem("reviews", JSON.stringify([]));
+    }
+  }
+
+  async function addProductToReviews(id) {
+    if (!JSON.parse(localStorage.getItem("reviews"))) {
+      localStorage.setItem("reviews", JSON.stringify([]));
+    }
+    const reviews = JSON.parse(localStorage.getItem("reviews"));
+    const { data } = await axios.get(`${API}/${id}`);
+    dispatch({ type: "GET_PRODUCT_FOR_REVIEWS", payload: data });
+    reviews.push(data);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
+  }
+  async function deleteProductToReviews(id) {
+    if (!JSON.parse(localStorage.getItem("reviews"))) {
+      localStorage.setItem("reviews", JSON.stringify([]));
+    }
+    const reviews = JSON.parse(localStorage.getItem("reviews"));
+    const { data } = await axios.get(`${API}/${id}`);
+    dispatch({ type: "GET_PRODUCT_FOR_REVIEWS", payload: data });
+    const newReviews = reviews.filter((review) => review.id !== id);
+    localStorage.setItem("reviews", JSON.stringify(newReviews));
+  }
 
   const values = {
+    deleteProductToReviews,
+    addProductToReviews,
+    createStorage,
     getProductDetails,
     productDetails: state.productDetails,
     fetchByParams,
