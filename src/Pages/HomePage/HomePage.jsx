@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomePage.css";
 import HomePagePic1 from "./HomePageImages/Group 10.png";
 import DoItRight from "./HomePageImages/Do it right.png";
+import { useProduct } from "../../contexts/ProductContextProvider";
 const HomePage = () => {
+  const { createStorage } = useProduct();
+  useEffect(() => {
+    createStorage();
+  }, []);
+
   return (
     <div>
       <div className="HomePage-body">

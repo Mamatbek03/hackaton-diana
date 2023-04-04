@@ -6,24 +6,30 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
-import { Container } from "@mui/material";
+import { Container, IconButton } from "@mui/material";
 import { useCart } from "../../../contexts/CartContextProvider";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { useState } from "react";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 export default function ProductCard({ product }) {
-  const [flag, setFlag] = useState(false);
+  const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
-  const { deleteProduct, getProductForComments } = useProduct();
+  const { deleteProduct, getProductForComments, addProductToReviews } =
+    useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
   const toggle = (flag) => {
-    console.log(flag);
+    if (flag && !JSON.parse(localStorage.getItem("reviews"))) {
+      addProductToReviews(product.id);
+    }
     return flag ? setFlag(false) : setFlag(true);
   };
 
   return (
     <Container>
-      <Card className="Card" style={{ width: "250px", margin: "10px" }}>
+      <Card className="Card" style={{ width: "350px", margin: "10px" }}>
         <CardMedia
-          sx={{ height: "200px ", width: "250px" }}
+          sx={{ height: "200px ", width: "350px" }}
           image={product.image}
           title="green iguana"
         />
@@ -37,8 +43,7 @@ export default function ProductCard({ product }) {
         </CardContent>
         <CardActions>
           <IconButton onClick={() => toggle(flag)}>
-            <FavoriteIcon color={flag ? "black" : "primary"} />
-            {flag ? product.like : product.like + 1}
+            <FavoriteIcon color={flag ? "white" : "error"} />
           </IconButton>
 
           <Button
@@ -47,6 +52,11 @@ export default function ProductCard({ product }) {
           >
             Reviews
           </Button>
+          <IconButton onClick={() => addProductToCart(product)}>
+            <AddShoppingCartIcon
+              color={checkProductInCart(product.id) ? "primary" : ""}
+            />
+          </IconButton>
           <Button
             onClick={() => {
               navigate(`/edit/${product.id}`);

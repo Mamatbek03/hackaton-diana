@@ -112,6 +112,13 @@ const CartContextProvider = ({ children }) => {
     getCart();
   }
 
+  const cartCleaner = () => {
+    localStorage.removeItem("cart");
+    if (!localStorage.getItem("cart")) {
+      getCart();
+    }
+  };
+
   const values = {
     getCart,
     cart: state.cart,
@@ -119,6 +126,7 @@ const CartContextProvider = ({ children }) => {
     checkProductInCart,
     changeProductCount,
     deleteCartProduct,
+    cartCleaner,
   };
   return <cartContext.Provider value={values}>{children}</cartContext.Provider>;
 };

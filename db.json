@@ -1,64 +1,28 @@
 {
   "products": [
     {
-<<<<<<< HEAD
-      "name": "shoe",
-      "gender": "woman",
-      "size": 40,
-=======
-      "name": "Nike",
-      "gender": "woman",
-      "size": 37,
->>>>>>> f363d5b8279aac60eaa58e7f32c3ba2a7cb72601
-      "color": "white",
-      "price": 60,
-      "description": "good",
-      "image": "https://i.pinimg.com/236x/96/1d/f2/961df29d38bda27dfe0a902c753244c8.jpg",
+      "name": "nike",
+      "gender": "man",
+      "size": 42,
+      "color": "red",
+      "price": 200,
+      "description": "afdadsf",
+      "image": "https://avatars.mds.yandex.net/i?id=34a0711cd601265bb2c2622eb2314025bf1c5184-9271382-images-thumbs&n=13",
+      "like": 0,
+      "comments": [],
       "id": 1
     },
     {
-      "name": "Nike",
-      "gender": "male",
-      "size": 41,
-      "color": "black",
-      "price": 80,
-      "description": "black",
-      "image": "https://i.pinimg.com/236x/b0/62/19/b06219a37a27edc381ff79fe960d5c75.jpg",
-      "id": 2
-    },
-    {
-      "name": "boots",
+      "name": "adidas",
       "gender": "woman",
       "size": 39,
-      "color": "beige",
-      "price": 80,
-      "description": "good",
-      "image": "https://i.pinimg.com/236x/aa/97/74/aa97748573a0fac729b45cb1b705c4fd.jpg",
-      "id": 3
-    },
-    {
-      "name": "nike",
-      "gender": "man",
-      "size": 41,
-      "color": "red",
-      "price": 200,
-      "description": "svsfv",
-      "image": "fdb",
+      "color": "black",
+      "price": 250,
+      "description": "fgasd",
+      "image": "https://avatars.mds.yandex.net/i?id=5ecc3c73948546ed220dcf9c057da5c635b1912d-2834022-images-thumbs&n=13",
       "like": 0,
       "comments": [],
-      "id": 4
-    },
-    {
-      "name": "nike",
-      "gender": "man",
-      "size": 41,
-      "color": "red",
-      "price": 200,
-      "description": "sdgs",
-      "image": "sdvds",
-      "like": 0,
-      "comments": [],
-      "id": 5
+      "id": 2
     }
   ]
 }
