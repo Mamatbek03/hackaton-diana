@@ -36,6 +36,8 @@ export default function Cart() {
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
+            <TableCell>Image</TableCell>
+
             <TableCell align="right">Description</TableCell>
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Count</TableCell>
@@ -51,6 +53,9 @@ export default function Cart() {
             >
               <TableCell component="th" scope="row">
                 {row.item.name}
+              </TableCell>
+              <TableCell component="th" scope="row">
+                <img src={row.item.image} width="100" height="100" alt="" />
               </TableCell>
               <TableCell align="right">{row.item.description}</TableCell>
               <TableCell align="right">{row.item.price}</TableCell>

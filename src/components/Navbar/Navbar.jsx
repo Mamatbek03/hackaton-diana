@@ -3,22 +3,25 @@ import logo from "./Navbarimages/KicksLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
-import { Badge, IconButton } from "@mui/material";
+import { Badge, Button, IconButton, Typography } from "@mui/material";
 import { ExitToAppOutlined } from "@mui/icons-material";
 import lupa from "./Navbarimages/icon.png";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import AuthGoogle from "../AuthGoogle/AuthGoogle";
+import Auth from "../Auth/Auth";
 import { useState } from "react";
 import { useEffect } from "react";
 import { getCountProductsInCart } from "../../helpers/functions";
 import { useCart } from "../../contexts/CartContextProvider";
+import AuthGoogle from "../Auth/AuthGoogle";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { display } from "@mui/system";
+import { ADMIN } from "../../helpers/consts";
 
 const pages = [
-  { name: <img className="logo" src={logo} alt="" />, link: "/home", id: 1 },
+  { name: <img className="logo" src={logo} alt="" />, link: "/", id: 1 },
   { name: "Catalog", link: "/products", id: 2 },
   { name: "AboutUs", link: "/AboutUs", id: 3 },
   { name: "Contacts", link: "/contacts", id: 4 },
-  { name: "Admin Page", link: "/admin-page", id: 5 },
 ];
 
 const Navbar = () => {
@@ -28,6 +31,10 @@ const Navbar = () => {
   useEffect(() => {
     setCount(getCountProductsInCart);
   }, [addProductToCart]);
+  const {
+    logout,
+    user: { email },
+  } = useAuth();
   return (
     <div className="header">
       <nav>
@@ -36,6 +43,15 @@ const Navbar = () => {
             {page.name}
           </Link>
         ))}
+        {email === ADMIN ? (
+          <span
+            onClick={() => navigate("/admin-page")}
+            sx={{ cursor: "pointer" }}
+          >
+            {" "}
+            Admin page
+          </span>
+        ) : null}
       </nav>
       <div className="search">
         <input
@@ -54,9 +70,19 @@ const Navbar = () => {
           <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
         </Badge>
         <AuthGoogle />
-        <IconButton>
-          <ExitToAppOutlined sx={{ width: 30, height: 30, marginLeft: 1 }} />
-        </IconButton>
+
+        {email ? (
+          <Button onClick={logout} sx={{ my: 2, display: "block" }}>
+            Logout
+          </Button>
+        ) : (
+          <Button
+            onClick={() => navigate("/auth")}
+            sx={{ my: 2, display: "block" }}
+          >
+            Login
+          </Button>
+        )}
       </div>
     </div>
   );
