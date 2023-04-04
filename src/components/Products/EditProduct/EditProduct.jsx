@@ -16,8 +16,8 @@ const EditProduct = () => {
 
   useEffect(() => {
     setEditProduct(productForEdit);
-  }, []);
-
+  }, [productForEdit]);
+  console.log(editProduct);
   function handleInput(e) {
     if (e.target.name === "size") {
       let obj = { ...editProduct, [e.target.name]: Number(e.target.value) };
@@ -37,7 +37,7 @@ const EditProduct = () => {
       <Container>
         <h1>Admin Page</h1>
         <TextField
-          value={editProduct ? editProduct.name : ""}
+          value={editProduct.name || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -47,7 +47,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.gender : ""}
+          value={editProduct.gender || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -57,7 +57,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.size : ""}
+          value={editProduct.size || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -67,7 +67,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.color : ""}
+          value={editProduct.color || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -77,7 +77,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.price : ""}
+          value={editProduct.price || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -87,7 +87,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.description : ""}
+          value={editProduct.description || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -97,7 +97,7 @@ const EditProduct = () => {
           size="small"
         />
         <TextField
-          value={editProduct ? editProduct.image : ""}
+          value={editProduct.image || ""}
           onChange={handleInput}
           className="admin_inp"
           id="outlined-basic"
@@ -115,7 +115,7 @@ const EditProduct = () => {
           size="large"
           variant="outlined"
         >
-          save Product's changes
+          save Changes
         </Button>
       </Container>
     </Box>

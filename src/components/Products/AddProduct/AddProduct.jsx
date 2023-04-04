@@ -8,17 +8,19 @@ import { useProduct } from "../../../contexts/ProductContextProvider";
 const AddProduct = () => {
   const navigate = useNavigate();
 
-  const { addProduct } = useProduct();
+  const { addProduct, product, setProduct } = useProduct();
 
-  const [product, setProduct] = useState({
-    name: "",
-    gender: "",
-    size: 0,
-    color: "",
-    price: 0,
-    description: "",
-    image: "",
-  });
+  // const [product, setProduct] = useState({
+  //   name: "",
+  //   gender: "",
+  //   size: 0,
+  //   color: "",
+  //   price: 0,
+  //   description: "",
+  //   image: "",
+  //   like: 0,
+  //   comments: [],
+  // });
 
   function handleInput(e) {
     if (e.target.name === "size") {

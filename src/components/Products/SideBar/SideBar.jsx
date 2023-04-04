@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 import {
+  Button,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -86,6 +87,22 @@ const SideBar = () => {
                 control={<Radio />}
                 label="less than 700$"
               />
+            </RadioGroup>
+          </FormControl>
+        </Grid>
+        <Grid>
+          <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label">Size</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="all"
+              name="radio-buttons-group"
+              onChange={(e) => fetchByParams("size", e.target.value)}
+            >
+              <FormControlLabel value="all" control={<Radio />} label="all" />
+              <FormControlLabel value="38" control={<Radio />} label="38" />
+              <FormControlLabel value="39" control={<Radio />} label="39" />
+              <FormControlLabel value="40" control={<Radio />} label="40" />
             </RadioGroup>
           </FormControl>
         </Grid>
