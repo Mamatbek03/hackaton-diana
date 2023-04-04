@@ -29,6 +29,8 @@ function reducer(state = INIT_STATE, action) {
       return { ...state, productsPerPage: action.payload };
     case "GET_PRODUCT_FOR_REVIEWS":
       return { ...state, productsPerPage: action.payload };
+    case "GET_PRODUCT_FOR_LIKES":
+      return { ...state, productsPerPage: action.payload };
 
     default:
       return state;
@@ -111,25 +113,68 @@ const ProductContextProvider = ({ children }) => {
     if (!JSON.parse(localStorage.getItem("reviews"))) {
       localStorage.setItem("reviews", JSON.stringify([]));
     }
-    const reviews = JSON.parse(localStorage.getItem("reviews"));
-    const { data } = await axios.get(`${API}/${id}`);
-    dispatch({ type: "GET_PRODUCT_FOR_REVIEWS", payload: data });
-    reviews.push(data);
-    localStorage.setItem("reviews", JSON.stringify(reviews));
-  }
-  async function deleteProductToReviews(id) {
-    if (!JSON.parse(localStorage.getItem("reviews"))) {
-      localStorage.setItem("reviews", JSON.stringify([]));
+    let reviews = JSON.parse(localStorage.getItem("reviews"));
+
+    let { data } = await axios.get(`${API}/${id}`);
+
+    let productToFind = reviews.filter((elem) => elem.id === id);
+
+    if (productToFind.length === 0) {
+      reviews.push(data);
+    } else {
+      reviews = reviews.filter((elem) => elem.id !== id);
     }
-    const reviews = JSON.parse(localStorage.getItem("reviews"));
-    const { data } = await axios.get(`${API}/${id}`);
+    localStorage.setItem("reviews", JSON.stringify(reviews));
     dispatch({ type: "GET_PRODUCT_FOR_REVIEWS", payload: data });
-    const newReviews = reviews.filter((review) => review.id !== id);
-    localStorage.setItem("reviews", JSON.stringify(newReviews));
   }
 
+  function checkProductInReviews(id) {
+    let reviews = JSON.parse(localStorage.getItem("reviews"));
+    if (reviews) {
+      let newReviews = reviews.filter((elem) => elem.id == id);
+      return newReviews.length > 0 ? true : false;
+    }
+  }
+  async function addProductLike(id) {
+    if (!JSON.parse(localStorage.getItem("likes"))) {
+      localStorage.setItem("likes", JSON.stringify([]));
+    }
+    let reviews = JSON.parse(localStorage.getItem("likes"));
+
+    let { data } = await axios.get(`${API}/${id}`);
+
+    let productToFind = reviews.filter((elem) => elem.id === id);
+
+    if (productToFind.length === 0) {
+      reviews.push(data);
+    } else {
+      reviews = reviews.filter((elem) => elem.id !== id);
+    }
+    localStorage.setItem("likes", JSON.stringify(reviews));
+    dispatch({ type: "GET_PRODUCT_FOR_LIKES", payload: data });
+    console.log(reviews);
+  }
+
+  function checkProductsLikes(id) {
+    let reviews = JSON.parse(localStorage.getItem("likes"));
+    if (reviews) {
+      let newReviews = reviews.filter((elem) => elem.id == id);
+      console.log(newReviews);
+      return newReviews.length > 0 ? true : false;
+    }
+  }
+  // // ! add comment
+  // function addComment() {
+  //   if (!comment.trim()) {
+  //     return alert("Comment is ampty");
+  //   }
+  //   productDetails.comments.push(comment);
+  //   console.log(productDetails.comments);
+  // }
+
   const values = {
-    deleteProductToReviews,
+    checkProductsLikes,
+    addProductLike,
     addProductToReviews,
     createStorage,
     getProductDetails,
@@ -145,6 +190,7 @@ const ProductContextProvider = ({ children }) => {
     products: state.products,
     product,
     setProduct,
+    checkProductInReviews,
   };
 
   return (
