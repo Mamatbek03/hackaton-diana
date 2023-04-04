@@ -1,13 +1,10 @@
-import React from "react";
-import GoogleIcon from "@mui/icons-material/Google";
 import { IconButton } from "@mui/material";
-// import { signWithGoogle } from "./fire";
-import { AccessAlarm, ThreeDRotation } from "@mui/icons-material";
-import { signWithGoogle } from "../../fire";
+import React from "react";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import GoogleIcon from "@mui/icons-material/Google";
 
 const AuthGoogle = () => {
-  const user = JSON.parse(localStorage.getItem("register"));
-
+  const { signWithGoogle } = useAuth();
   return (
     <div>
       <IconButton onClick={() => signWithGoogle()}>
@@ -15,7 +12,7 @@ const AuthGoogle = () => {
       </IconButton>
       <>
         {/* {user.email}, {user.displayName}
-        <img src={user.photoURL} alt="" /> */}
+    <img src={user.photoURL} alt="" /> */}
       </>
     </div>
   );
