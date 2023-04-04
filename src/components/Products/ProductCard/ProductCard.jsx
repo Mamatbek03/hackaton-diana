@@ -11,6 +11,8 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { ADMIN } from "../../../helpers/consts";
+import { useAuth } from "../../../contexts/AuthContextProvider";
 
 export default function ProductCard({ product }) {
   const [flag, setFlag] = useState(true);
@@ -24,6 +26,9 @@ export default function ProductCard({ product }) {
     }
     return flag ? setFlag(false) : setFlag(true);
   };
+  const {
+    user: { email },
+  } = useAuth();
 
   return (
     <Container>
@@ -52,22 +57,29 @@ export default function ProductCard({ product }) {
           >
             Reviews
           </Button>
+
           <IconButton onClick={() => addProductToCart(product)}>
             <AddShoppingCartIcon
               color={checkProductInCart(product.id) ? "primary" : ""}
             />
           </IconButton>
-          <Button
-            onClick={() => {
-              navigate(`/edit/${product.id}`);
-            }}
-            size="small"
-          >
-            Edit
-          </Button>
-          <Button onClick={() => deleteProduct(product.id)} size="small">
-            Delete
-          </Button>
+
+          {email === ADMIN ? (
+            <>
+              {" "}
+              <Button
+                onClick={() => {
+                  navigate(`/edit/${product.id}`);
+                }}
+                size="small"
+              >
+                Edit
+              </Button>
+              <Button onClick={() => deleteProduct(product.id)} size="small">
+                Delete
+              </Button>
+            </>
+          ) : null}
         </CardActions>
       </Card>
     </Container>

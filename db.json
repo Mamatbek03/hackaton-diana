@@ -1,3 +1,40 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "y",
+      "gender": "hfhfhf",
+      "size": null,
+      "color": "y",
+      "price": null,
+      "description": "yy",
+      "image": "fu",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "diana",
+      "gender": "woman",
+      "size": 46,
+      "color": "red",
+      "price": 450,
+      "description": "из хорошего материала рекомендуем ",
+      "image": "https://i.ytimg.com/vi/d_t5nnK9Rn4/maxresdefault.jpg",
+      "like": 0,
+      "comments": [],
+      "id": 2
+    },
+    {
+      "name": "spongebob",
+      "gender": "ono",
+      "size": 56,
+      "color": "green",
+      "price": 560,
+      "description": "fghjkl;fjf fj",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXNtA_reXqsChVloWfwyzb4k6jkofXPmabnA&usqp=CAU",
+      "like": 0,
+      "comments": [],
+      "id": 3
+    }
+  ]
 }
