@@ -9,7 +9,15 @@
       "description": "afdadsf",
       "image": "https://avatars.mds.yandex.net/i?id=34a0711cd601265bb2c2622eb2314025bf1c5184-9271382-images-thumbs&n=13",
       "like": 0,
-      "comments": [],
+      "comments": [
+        "dvzv",
+        "dvssd",
+        "first comment",
+        "vbxv",
+        "second comment",
+        "super",
+        "bassar jok"
+      ],
       "id": 1
     },
     {
@@ -23,6 +31,18 @@
       "like": 0,
       "comments": [],
       "id": 2
+    },
+    {
+      "name": "sportshoe",
+      "gender": "man",
+      "size": 43,
+      "color": "blue",
+      "price": 140,
+      "description": "fv",
+      "image": "https://avatars.mds.yandex.net/i?id=4dee69ec09cdd0d031f00631a92ec960dd802519-9182388-images-thumbs&n=13",
+      "like": 0,
+      "comments": [],
+      "id": 3
     }
   ]
 }

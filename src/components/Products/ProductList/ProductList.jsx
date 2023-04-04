@@ -13,7 +13,7 @@ const ProductList = () => {
   const shoesPerPage = 9;
   const count = Math.ceil(products.length / shoesPerPage);
 
-  const searchParams = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     getProducts();

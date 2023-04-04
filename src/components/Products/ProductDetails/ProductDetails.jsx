@@ -9,13 +9,16 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { AddComment } from "@mui/icons-material";
 
 const EditProduct = () => {
   const navigate = useNavigate();
-  const { productForEdit, getProductForEdit } = useProduct();
-  const [productDetails, setProductDetails] = useState(productForEdit);
-  const { id } = useParams();
+  const { productForEdit, getProductForEdit, saveEditProduct } = useProduct();
 
+  const [productDetails, setProductDetails] = useState(productForEdit);
+  const [comment, setComment] = useState("");
+
+  const { id } = useParams();
   useEffect(() => {
     getProductForEdit(id);
   }, []);
@@ -23,6 +26,14 @@ const EditProduct = () => {
   useEffect(() => {
     setProductDetails(productForEdit);
   }, [productForEdit]);
+  function addComment() {
+    productDetails.comments.push(comment);
+    saveEditProduct(productDetails);
+    console.log(productDetails.comments);
+  }
+  function clear() {
+    setComment("");
+  }
 
   return (
     <Box>
@@ -39,10 +50,6 @@ const EditProduct = () => {
               {productDetails.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              <FavoriteIcon />
-              {productDetails.like}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
               {productDetails.gender}
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -57,16 +64,31 @@ const EditProduct = () => {
             <Typography variant="body2" color="text.secondary">
               {productDetails.description}
             </Typography>
-            {/* {productDetails.comments.length !== 0
-              ? productDetails.comments.map((comment) => {
-                  <Typography>{comment}</Typography>;
-                })
-              : ""} */}
-
+            Comments:
             <TextField
+              onChange={(e) => {
+                setComment(e.target.value);
+              }}
               sx={{ width: "100%", height: "40%" }}
-              label="add comment"
+              label="this should have been a comment"
+              variant="outlined"
+              name="name"
+              size="small"
+              value={comment}
             />
+            <Button
+              onClick={() => {
+                addComment();
+                saveEditProduct(productDetails);
+                clear();
+              }}
+            >
+              add comment
+            </Button>
+            <h3> Comments:</h3>
+            {productDetails.comments?.map((comment) => (
+              <p>{comment}</p>
+            ))}
           </CardContent>
         </CardActionArea>
       </Card>

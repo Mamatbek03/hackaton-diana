@@ -11,19 +11,19 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 
 export default function ProductCard({ product }) {
-  const [flag, setFlag] = useState(true);
+  // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
-  const { deleteProduct, getProductForComments, addProductToReviews } =
-    useProduct();
+  const {
+    deleteProduct,
+    addProductToReviews,
+    checkProductInReviews,
+    checkProductsLikes,
+    addProductLike,
+  } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
-  const toggle = (flag) => {
-    if (flag && !JSON.parse(localStorage.getItem("reviews"))) {
-      addProductToReviews(product.id);
-    }
-    return flag ? setFlag(false) : setFlag(true);
-  };
 
   return (
     <Container>
@@ -42,8 +42,16 @@ export default function ProductCard({ product }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <IconButton onClick={() => toggle(flag)}>
-            <FavoriteIcon color={flag ? "white" : "error"} />
+          <IconButton onClick={() => addProductToReviews(product.id)}>
+            <BookmarkIcon
+              color={checkProductInReviews(product.id) ? "primary" : "white"}
+            />
+          </IconButton>
+          <IconButton onClick={() => addProductLike(product.id)}>
+            <FavoriteIcon
+              color={checkProductsLikes(product.id) ? "error" : "white"}
+            />
+            {checkProductsLikes(product.id) ? product.like + 1 : product.like}
           </IconButton>
 
           <Button
