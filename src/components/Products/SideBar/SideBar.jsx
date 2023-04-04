@@ -24,7 +24,14 @@ const SideBar = () => {
   }, [search]);
 
   return (
-    <Grid item md={4} paddingRight={10} paddingBottom={10} marginLeft={3}>
+    <Grid
+      item
+      md={4}
+      paddingRight={10}
+      ma
+      paddingBottom={10}
+      sx={{ width: "200px" }}
+    >
       <Paper elevation={1} sx={{ width: "200px" }}>
         <TextField
           id="standard-basic"

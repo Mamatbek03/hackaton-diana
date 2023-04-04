@@ -1,10 +1,13 @@
+import { Card } from "@mui/material";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AboutUs from "../components/AboutUs/AboutUs";
 import Cart from "../components/Cart/Cart";
 import Contacts from "../components/Contacts/Contacts";
+import FormOrder from "../components/FormOrder/FormOrder";
 import Logo from "../components/Logo/Logo";
 import ProductList from "../components/Products/ProductList/ProductList";
+import PaymentForm from "../LinkCard";
 import AdminPage from "../Pages/AdminPage/AdminPage";
 import EditProductPage from "../Pages/EditProductPage/EditProductPage";
 import HomePage from "../Pages/HomePage/HomePage";
@@ -20,6 +23,8 @@ const MainRoutes = () => {
     { link: "/edit/:id", element: <EditProductPage />, id: 6 },
     { link: "/cart", element: <Cart />, id: 7 },
     { link: "/details/:id", element: <ProductDetailsPage />, id: 8 },
+    { link: "/form-order", element: <FormOrder />, id: 8 },
+    { link: "/card", element: <PaymentForm />, id: 9 },
   ];
   return (
     <>

@@ -10,6 +10,7 @@ import { Container, IconButton } from "@mui/material";
 import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 export default function ProductCard({ product }) {
   const [flag, setFlag] = useState(false);
@@ -21,11 +22,12 @@ export default function ProductCard({ product }) {
     return flag ? setFlag(false) : setFlag(true);
   };
 
+
   return (
     <Container>
-      <Card sx={{ maxWidth: 345, margin: "30px" }}>
+      <Card className="Card" style={{ width: "250px", margin: "10px" }}>
         <CardMedia
-          sx={{ height: 300 }}
+          sx={{ height: "200px ", width: "250px" }}
           image={product.image}
           title="green iguana"
         />
@@ -49,6 +51,11 @@ export default function ProductCard({ product }) {
           >
             Reviews
           </Button>
+          <IconButton onClick={() => addProductToCart(product)}>
+            <AddShoppingCartIcon
+              color={checkProductInCart(product.id) ? "primary" : ""}
+            />
+          </IconButton>
           <Button
             onClick={() => {
               navigate(`/edit/${product.id}`);
