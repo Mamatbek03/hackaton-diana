@@ -5,6 +5,7 @@ import CardContextProvider from "./contexts/CardContextProvider";
 import CartContextProvider from "./contexts/CartContextProvider";
 import ProductContextProvider from "./contexts/ProductContextProvider";
 import MainRoutes from "./routes/MainRoutes";
+import HomePage from "./Pages/HomePage/HomePage";
 
 const App = () => {
   return (

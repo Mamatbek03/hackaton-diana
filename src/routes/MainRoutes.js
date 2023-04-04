@@ -8,6 +8,7 @@ import ProductList from "../components/Products/ProductList/ProductList";
 import AdminPage from "../Pages/AdminPage/AdminPage";
 import EditProductPage from "../Pages/EditProductPage/EditProductPage";
 import HomePage from "../Pages/HomePage/HomePage";
+import ProductDetailsPage from "../Pages/ProductDetailsPage/ProductDetailsPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -18,6 +19,7 @@ const MainRoutes = () => {
     { link: "/home", element: <HomePage />, id: 5 },
     { link: "/edit/:id", element: <EditProductPage />, id: 6 },
     { link: "/cart", element: <Cart />, id: 7 },
+    { link: "/details/:id", element: <ProductDetailsPage />, id: 8 },
   ];
   return (
     <>
