@@ -1,4 +1,24 @@
 {
   "products": [
+    {
+      "name": "Diana",
+      "gender": "34",
+      "size": null,
+      "color": "nm",
+      "price": 6789,
+      "description": "ghjk",
+      "image": "ghjl;",
+      "id": 1
+    },
+    {
+      "name": "Diana",
+      "gender": "m",
+      "size": 6,
+      "color": "red",
+      "price": 560,
+      "description": "ghjk",
+      "image": "ghjkl",
+      "id": 2
+    }
   ]
 }
