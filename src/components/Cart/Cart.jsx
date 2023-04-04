@@ -9,6 +9,7 @@ import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/CartContextProvider";
 import { useEffect } from "react";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -23,17 +24,12 @@ const rows = [
 ];
 
 export default function Cart() {
+  const navigate = useNavigate();
   const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
   useEffect(() => {
     getCart();
   }, []);
 
-  const cartCleaner = () => {
-    localStorage.removeItem("cart");
-    if (!localStorage.getItem("cart")) {
-      getCart();
-    }
-  };
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -77,7 +73,10 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-      <Button onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice}</Button>
+      <Button onClick={() => navigate("/form-order")}>
+        {" "}
+        BUY NOW FOR {cart?.totalPrice}
+      </Button>
     </TableContainer>
   );
 }

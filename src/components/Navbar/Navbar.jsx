@@ -8,6 +8,10 @@ import { ExitToAppOutlined } from "@mui/icons-material";
 import lupa from "./Navbarimages/icon.png";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import AuthGoogle from "../AuthGoogle/AuthGoogle";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getCountProductsInCart } from "../../helpers/functions";
+import { useCart } from "../../contexts/CartContextProvider";
 
 const pages = [
   { name: <img className="logo" src={logo} alt="" />, link: "/home", id: 1 },
@@ -19,6 +23,11 @@ const pages = [
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [count, setCount] = useState(0);
+  const { addProductToCart } = useCart();
+  useEffect(() => {
+    setCount(getCountProductsInCart);
+  }, [addProductToCart]);
   return (
     <div className="header">
       <nav>
@@ -39,7 +48,7 @@ const Navbar = () => {
       <div className="users_name">
         <Badge
           sx={{ width: 30, height: 30, marginTop: 1, marginRight: 2 }}
-          badgeContent={4}
+          badgeContent={count}
           color="primary"
         >
           <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
