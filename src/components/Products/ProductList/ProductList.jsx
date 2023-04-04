@@ -34,18 +34,13 @@ const ProductList = () => {
   }
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
-      }}
-    >
-      <Container>
+    <Box>
+      <Container sx={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
         <SideBar />
         {currentData().map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+
         <Stack spacing={1}>
           <Pagination
             onChange={handlePage}
@@ -53,6 +48,7 @@ const ProductList = () => {
             count={count}
             variant="outlined"
             shape="rounded"
+            sx={{ marginTop: "500px", marginLeft: "-700px" }}
           />
         </Stack>
       </Container>
