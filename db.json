@@ -1,28 +1,6 @@
 {
   "products": [
-    {
-      "name": "diana",
-      "gender": "gh",
-      "size": 678,
-      "color": "678",
-      "price": 678,
-      "description": "78",
-      "image": "789",
-      "like": 0,
-      "comments": [],
-      "id": 1
-    },
-    {
-      "name": "fghj",
-      "gender": "h",
-      "size": null,
-      "color": "h",
-      "price": null,
-      "description": "h",
-      "image": "h",
-      "like": 0,
-      "comments": [],
-      "id": 2
-    }
+    
+
   ]
 }

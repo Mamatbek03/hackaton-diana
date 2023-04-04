@@ -14,6 +14,7 @@ import EditProductPage from "../Pages/EditProductPage/EditProductPage";
 import HomePage from "../Pages/HomePage/HomePage";
 import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage";
 import ProductDetailsPage from "../Pages/ProductDetailsPage/ProductDetailsPage";
+import ProductReview from "../components/Products/ProductReview/ProductReview";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -25,10 +26,14 @@ const MainRoutes = () => {
     { link: "/edit/:id", element: <EditProductPage />, id: 6 },
     { link: "/cart", element: <Cart />, id: 7 },
     { link: "/details/:id", element: <ProductDetailsPage />, id: 8 },
+
     { link: "/form-order", element: <FormOrder />, id: 8 },
     { link: "/card", element: <PaymentForm />, id: 9 },
     { link: "/auth", element: <Auth />, id: 10 },
     { link: "*", element: <NotFoundPage />, id: 11 },
+    { link: "/reviews", element: <ProductReview />, id: 11 },
+    
+
   ];
   return (
     <>
