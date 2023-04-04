@@ -34,88 +34,117 @@ const AddProduct = () => {
       setProduct(obj);
     }
   }
-  console.log(product);
 
   return (
-    <Box>
-      <Container>
-        <h1>Admin Page</h1>
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Name"
-          variant="outlined"
-          name="name"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Gender"
-          variant="outlined"
-          name="gender"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Size"
-          variant="outlined"
-          name="size"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Color"
-          variant="outlined"
-          name="color"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Price"
-          variant="outlined"
-          name="price"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Description"
-          variant="outlined"
-          name="description"
-          size="small"
-        />
-        <TextField
-          onChange={handleInput}
-          className="admin_inp"
-          id="outlined-basic"
-          label="Image"
-          variant="outlined"
-          name="image"
-          size="small"
-        />
-        <Button
-          className="admin_btn"
-          onClick={() => {
-            addProduct(product);
-            navigate("/products");
+    <div
+      style={{
+        backgroundColor: "rgb(219, 219, 219)",
+        width: "100%",
+        height: "auto",
+        padding: "70px 0 200px ",
+        fontFamily: "sans-serif",
+        marginTop: "-35px",
+      }}
+    >
+      <Box>
+        <Container
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            textAlign: "center",
+            width: "35%",
+            paddingBottom: "50px",
+            borderRadius: "25px",
+            backgroundColor: "white",
           }}
-          size="large"
-          variant="outlined"
         >
-          Add Product
-        </Button>
-      </Container>
-    </Box>
+          <h1>Admin Page</h1>
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+            name="name"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Gender"
+            variant="outlined"
+            name="gender"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Size"
+            variant="outlined"
+            name="size"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Color"
+            variant="outlined"
+            name="color"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Price"
+            variant="outlined"
+            name="price"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Description"
+            variant="outlined"
+            name="description"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <TextField
+            onChange={handleInput}
+            className="admin_inp"
+            id="outlined-basic"
+            label="Image"
+            variant="outlined"
+            name="image"
+            size="small"
+            sx={{ padding: "10px" }}
+          />
+          <Button
+            className="admin_btn"
+            sx={{ width: "40%", marginLeft: "30%" }}
+            onClick={() => {
+              addProduct(product);
+              navigate("/products");
+            }}
+            size="large"
+            variant="outlined"
+          >
+            Add Product
+          </Button>
+        </Container>
+      </Box>
+    </div>
   );
 };
 

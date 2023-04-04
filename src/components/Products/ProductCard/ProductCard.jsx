@@ -6,10 +6,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 import { useNavigate } from "react-router-dom";
-import { Container, IconButton } from "@mui/material";
+import { Container } from "@mui/material";
 import { useCart } from "../../../contexts/CartContextProvider";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import { useState } from "react";
 
 export default function ProductCard({ product }) {
   const [flag, setFlag] = useState(false);
@@ -23,9 +21,9 @@ export default function ProductCard({ product }) {
 
   return (
     <Container>
-      <Card sx={{ maxWidth: 345, margin: "30px" }}>
+      <Card className="Card" style={{ width: "250px", margin: "10px" }}>
         <CardMedia
-          sx={{ height: 300 }}
+          sx={{ height: "200px ", width: "250px" }}
           image={product.image}
           title="green iguana"
         />
