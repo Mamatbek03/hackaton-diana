@@ -16,7 +16,7 @@ const Footer = () => {
               JOIN OUR KICKSPLUS <br /> CLUB & GET 15% OFF{" "}
             </h3>
             <span>Sign up for free! </span>
-            <button>Sign up</button>
+            <button style={{ padding: "5px" }}>Sign up</button>
           </div>
           <img className="logo-footer" src={logo} alt="" />
         </div>
@@ -24,10 +24,8 @@ const Footer = () => {
         <div className="footer-black-right">
           <div className="footer-text">
             <h2>About Us</h2>
-            <p>
+            <p className="p-of-footer">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-              mollitia facilis esse deleniti recusandae vero velit totam,
-              distinctio omnis fugit?
             </p>
           </div>
           {/* ================================================== links */}

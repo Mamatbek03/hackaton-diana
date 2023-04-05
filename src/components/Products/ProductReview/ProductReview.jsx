@@ -5,7 +5,7 @@ const ProductReview = () => {
   const reviews = JSON.parse(localStorage.getItem("reviews"));
 
   return (
-    <div>
+    <div className="favor">
       {reviews.map((review) => (
         <Card className="Card" style={{ width: "350px", margin: "10px" }}>
           <CardMedia

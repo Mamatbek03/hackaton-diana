@@ -1,0 +1,49 @@
+
+.table{
+    display: flex;
+    width: 90% !important;
+}
+.image-of-table{
+    width: auto;
+}
+.input-of-table{
+    margin-top: 60px !important;
+}
+.tableContainer{
+    font-size: 25px;
+}
+
+@media all and (max-width: 713px){
+    .input-of-table{
+        margin-top: 20px !important;
+    }
+    .image-of-table{
+        width: 30px;
+        height: 30px;
+    }
+    .main-table{
+        font-size: 12px;
+    }
+} 
+
+@media all and (max-width: 600px){
+    .main-table{
+        font-size: 10px !important;
+    }
+}
+
+@media all and (max-width: 500px){
+    .image-of-table{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media all and (max-width: 450px){
+    .image-of-table{
+        width: 30px;
+        height: 30px;
+    }
+    .main-table{
+        font-size: 7px;
+    }
+}
