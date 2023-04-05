@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../../contexts/CartContextProvider";
 import { cartCleaner } from "../../helpers/functions";
 import "../FormOrder/FormOrder.css";
+
 const FormOrder = () => {
   const navigate = useNavigate();
   const { cartCleaner, cart } = useCart();
@@ -13,6 +14,7 @@ const FormOrder = () => {
   }
   return (
     <div
+
       className="wrapp"
       style={{
         fontFamily: "Rubik",
@@ -126,6 +128,7 @@ const FormOrder = () => {
         }}
       >
         <button
+          className="btn-1"
           style={{
             width: "40%",
             height: "10%",
@@ -138,6 +141,7 @@ const FormOrder = () => {
         </button>
 
         <button
+          className="btn-2"
           style={{ width: "60%", height: "10%", marginLeft: "0px" }}
           onClick={handleBuy}
         >
