@@ -18,9 +18,9 @@ const FormOrder = () => {
         fontFamily: "Rubik",
         display: "flex",
         flexDirection: "row",
-        // paddingLeft: "15%",
-        // paddingBottom: "5%",
-        // paddingTop: "5%",
+        paddingLeft: "15%",
+        paddingBottom: "5%",
+        paddingTop: "5%",
         backgroundColor: "rgb(219, 219, 219)",
       }}
     >
@@ -138,6 +138,7 @@ const FormOrder = () => {
         </button>
 
         <button
+          className="form-button"
           style={{ width: "60%", height: "10%", marginLeft: "0px" }}
           onClick={handleBuy}
         >
