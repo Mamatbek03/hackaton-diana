@@ -14,10 +14,16 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { useEffect } from "react";
+import { ADMIN } from "../../../helpers/consts";
+import { useAuth } from "../../../contexts/AuthContextProvider";
 
 export default function ProductCard({ product }) {
   // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
+  const {
+    logout,
+    user: { email },
+  } = useAuth();
   const {
     deleteProduct,
     addProductToReviews,
@@ -42,9 +48,9 @@ export default function ProductCard({ product }) {
     return product.like + 1;
   }
   return (
-    <Card className="Card" style={{ width: "350px", margin: "10px" }}>
+    <Card className="Card" style={{ width: "400px", margin: "10px" }}>
       <CardMedia
-        sx={{ height: "200px ", width: "350px" }}
+        sx={{ height: "200px ", width: "400px" }}
         image={product.image}
         title="green iguana"
       />
@@ -77,17 +83,21 @@ export default function ProductCard({ product }) {
             color={checkProductInCart(product.id) ? "primary" : ""}
           />
         </IconButton>
-        <Button
-          onClick={() => {
-            navigate(`/edit/${product.id}`);
-          }}
-          size="small"
-        >
-          Edit
-        </Button>
-        <Button onClick={() => deleteProduct(product.id)} size="small">
-          Delete
-        </Button>
+        {email === ADMIN ? (
+          <>
+            <Button
+              onClick={() => {
+                navigate(`/edit/${product.id}`);
+              }}
+              size="small"
+            >
+              Edit
+            </Button>
+            <Button onClick={() => deleteProduct(product.id)} size="small">
+              Delete
+            </Button>
+          </>
+        ) : null}
       </CardActions>
     </Card>
   );
