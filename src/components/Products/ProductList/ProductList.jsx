@@ -35,8 +35,9 @@ const ProductList = () => {
 
   return (
     <Box>
-      <Container sx={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
+      <Container>
         <SideBar />
+
         {currentData().map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

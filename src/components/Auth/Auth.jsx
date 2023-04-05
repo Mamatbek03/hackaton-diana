@@ -14,6 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import AuthGoogle from "./AuthGoogle";
 
 function Copyright(props) {
   return (
@@ -158,6 +159,9 @@ export default function Auth() {
                     {"Already have an account? Log In"}
                   </Link>
                 )}
+              </Grid>
+              <Grid sx={{ ml: 15 }}>
+                <AuthGoogle />
               </Grid>
             </Grid>
           </Box>

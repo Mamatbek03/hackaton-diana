@@ -52,13 +52,15 @@ export default function Cart() {
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.item.name}
+                <img src={row.item.image} width="200" height="150" alt="" />
               </TableCell>
               <TableCell component="th" scope="row">
-                <img src={row.item.image} width="100" height="100" alt="" />
+                {row.item.name}
               </TableCell>
               <TableCell align="right">{row.item.description}</TableCell>
-              <TableCell align="right">{row.item.price}</TableCell>
+              <TableCell sx={{ mr: 10 }} align="right">
+                {row.item.price}
+              </TableCell>
               <input
                 type="number"
                 min={1}
