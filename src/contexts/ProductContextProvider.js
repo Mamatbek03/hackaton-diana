@@ -15,6 +15,7 @@ const INIT_STATE = {
   productsPerPage: [],
   productDetails: {},
   productForReviews: {},
+  productForEdit: {},
 };
 function reducer(state = INIT_STATE, action) {
   switch (action.type) {
@@ -30,7 +31,7 @@ function reducer(state = INIT_STATE, action) {
     case "GET_PRODUCT_FOR_REVIEWS":
       return { ...state, productsPerPage: action.payload };
     case "GET_PRODUCT_FOR_LIKES":
-      return { ...state, productsPerPage: action.payload };
+      return { ...state, productForEdit: action.payload };
 
     default:
       return state;
@@ -135,44 +136,57 @@ const ProductContextProvider = ({ children }) => {
       return newReviews.length > 0 ? true : false;
     }
   }
-  async function addProductLike(id) {
+  async function addProductLike(product) {
     if (!JSON.parse(localStorage.getItem("likes"))) {
       localStorage.setItem("likes", JSON.stringify([]));
     }
     let reviews = JSON.parse(localStorage.getItem("likes"));
 
-    let { data } = await axios.get(`${API}/${id}`);
+    let { data } = await axios.get(`${API}/${product.id}`);
 
-    let productToFind = reviews.filter((elem) => elem.id === id);
+    let productToFind = reviews.filter((elem) => elem.id === product.id);
 
     if (productToFind.length === 0) {
       reviews.push(data);
+      data.like += 1;
+      await axios.patch(`${API}/${product.id}`, data);
+
+      console.log(data.like);
     } else {
-      reviews = reviews.filter((elem) => elem.id !== id);
+      reviews = reviews.filter((elem) => elem.id !== product.id);
+      data.like -= 1;
+
+      await axios.patch(`${API}/${product.id}`, data);
     }
     localStorage.setItem("likes", JSON.stringify(reviews));
     dispatch({ type: "GET_PRODUCT_FOR_LIKES", payload: data });
-    console.log(reviews);
+    // console.log(reviews);
   }
 
   function checkProductsLikes(id) {
     let reviews = JSON.parse(localStorage.getItem("likes"));
     if (reviews) {
       let newReviews = reviews.filter((elem) => elem.id == id);
-      console.log(newReviews);
+      // console.log(newReviews);
       return newReviews.length > 0 ? true : false;
     }
   }
-  // // ! add comment
-  // function addComment() {
-  //   if (!comment.trim()) {
-  //     return alert("Comment is ampty");
-  //   }
-  //   productDetails.comments.push(comment);
-  //   console.log(productDetails.comments);
-  // }
+
+  // ! like
+  async function getLikes() {
+    const likes = JSON.parse(localStorage.getItem("likes"));
+    for (let i = 0; i < state.products.length; i++) {
+      for (let j = 0; j < likes.length; j++) {
+        if (state.products[i].id === likes[j].id) {
+          await axios.patch(`${API}/${likes[j].id}`, likes[j]);
+          console.log(213);
+        }
+      }
+    }
+  }
 
   const values = {
+    getLikes,
     checkProductsLikes,
     addProductLike,
     addProductToReviews,
