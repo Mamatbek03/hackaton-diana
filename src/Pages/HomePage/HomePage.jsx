@@ -15,6 +15,9 @@ const HomePage = () => {
 
   return (
     <div>
+      <div className="video">
+        <video src="https://pin.it/6FB2C49" autoPlay></video>
+      </div>
       <div className="HomePage-body">
         <div className="HomePage-content">
           <div className="HomePage-h3">
