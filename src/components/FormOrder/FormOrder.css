@@ -1,0 +1,19 @@
+
+.btn-1{
+    border-radius: 15px;
+}
+.btn-2{
+    border-radius: 15px;
+}
+.total-pack{
+    width: 30%;
+   
+}
+.all-form{
+    display: block;
+}
+@media all and (max-width: 421px){
+   .btn-2{
+    margin-top: 100px;
+   }
+}

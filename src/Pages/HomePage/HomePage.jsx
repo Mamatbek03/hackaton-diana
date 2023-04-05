@@ -28,12 +28,7 @@ const HomePage = () => {
             <span className="HP-lock1-span">
               Nike introducing the new air max for everyone's comfort
             </span>
-            <button
-              className="HP-block1-btn"
-              style={{ height: "15%", padding: "10px" }}
-            >
-              Shop Now
-            </button>
+            <button className="HP-block1-btn">Shop Now</button>
           </div>
         </div>
 
@@ -51,15 +46,7 @@ const HomePage = () => {
             className="reviews-text"
             style={{ display: "flex", height: "300px" }}
           >
-            <h3
-              style={{
-                fontFamily: "sans-serif",
-                fontSize: "100px",
-                marginLeft: "-40%",
-              }}
-            >
-              REVIEWS
-            </h3>
+            <h3>REVIEWS</h3>
           </div>
         </div>
         <div
