@@ -11,11 +11,16 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useAuth } from "../../../contexts/AuthContextProvider";
 
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { useEffect } from "react";
+import { ADMIN } from "../../../helpers/consts";
 
 export default function ProductCard({ product }) {
+  const {
+    user: { email },
+  } = useAuth();
   // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
   const {
@@ -77,17 +82,22 @@ export default function ProductCard({ product }) {
             color={checkProductInCart(product.id) ? "primary" : ""}
           />
         </IconButton>
-        <Button
-          onClick={() => {
-            navigate(`/edit/${product.id}`);
-          }}
-          size="small"
-        >
-          Edit
-        </Button>
-        <Button onClick={() => deleteProduct(product.id)} size="small">
-          Delete
-        </Button>
+        {email === ADMIN ? (
+          <>
+            {" "}
+            <Button
+              onClick={() => {
+                navigate(`/edit/${product.id}`);
+              }}
+              size="small"
+            >
+              Edit
+            </Button>
+            <Button onClick={() => deleteProduct(product.id)} size="small">
+              Delete
+            </Button>
+          </>
+        ) : null}
       </CardActions>
     </Card>
   );
