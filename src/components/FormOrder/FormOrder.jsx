@@ -9,7 +9,7 @@ const FormOrder = () => {
   const { cartCleaner, cart } = useCart();
   function handleBuy() {
     cartCleaner();
-    navigate("/home");
+    navigate("/");
   }
   return (
     <div
