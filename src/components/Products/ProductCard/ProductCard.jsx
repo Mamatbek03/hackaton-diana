@@ -11,19 +11,19 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { useAuth } from "../../../contexts/AuthContextProvider";
 
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { useEffect } from "react";
 import { ADMIN } from "../../../helpers/consts";
-import { useAuth } from "../../../contexts/AuthContextProvider";
-import "./styles.css";
+
 export default function ProductCard({ product }) {
-  // const [flag, setFlag] = useState(true);
+
   const {
-    logout,
     user: { email },
   } = useAuth();
   const navigate = useNavigate();
+
 
   const {
     deleteProduct,
@@ -63,6 +63,7 @@ export default function ProductCard({ product }) {
       <CardMedia
         className="card-media"
         sx={{ height: "200px ", width: "350px" }}
+
         image={product.image}
         title="green iguana"
       />
@@ -114,16 +115,11 @@ export default function ProductCard({ product }) {
             Details
           </Button>
         </div>
+
         {email === ADMIN ? (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "end",
-              marginTop: "20px",
-            }}
-          >
+          <>
+            {" "}
             <Button
-              sx={{ backgroundColor: "green", color: "white", mx: 3 }}
               onClick={() => {
                 navigate(`/edit/${product.id}`);
               }}
@@ -131,14 +127,10 @@ export default function ProductCard({ product }) {
             >
               Edit
             </Button>
-            <Button
-              sx={{ backgroundColor: "pink", color: "black", mx: 1 }}
-              onClick={() => deleteProduct(product.id)}
-              size="small"
-            >
+            <Button onClick={() => deleteProduct(product.id)} size="small">
               Delete
             </Button>
-          </div>
+          </>
         ) : null}
       </CardActions>
     </Card>
