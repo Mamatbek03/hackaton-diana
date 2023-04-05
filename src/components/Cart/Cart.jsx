@@ -38,7 +38,9 @@ export default function Cart() {
             <TableCell>Name</TableCell>
             <TableCell>Image</TableCell>
 
-            <TableCell align="right">Description</TableCell>
+            <TableCell className="dd" align="right">
+              Description
+            </TableCell>
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Count</TableCell>
             <TableCell align="right">Subprice</TableCell>
