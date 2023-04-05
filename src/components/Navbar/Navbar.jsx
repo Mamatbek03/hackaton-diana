@@ -50,7 +50,14 @@ const Navbar = () => {
   return (
     <div className="header">
       <div id="burger-menu">
-        <BurgerMenu />
+        <div id="wrapper">
+          <BurgerMenu />
+        </div>
+      </div>
+      <div id="navbar_icon">
+        <div id="navbar_logo">
+          <img className="logo" src={logo} alt="" />
+        </div>
       </div>
       <nav>
         {pages.map((page) => (
@@ -63,19 +70,11 @@ const Navbar = () => {
             onClick={() => navigate("/admin-page")}
             sx={{ cursor: "pointer" }}
           >
-            {" "}
             Admin page
           </span>
         ) : null}
       </nav>
-      {/* <div className="search">
-        <input
-          className="inp-search"
-          type="text"
-          placeholder="поиск по каталогу"
-        />
-        <img className="lupa" src={lupa} alt="" />
-      </div> */}
+
       <div className="users_name">
         <Badge
           sx={{
@@ -91,11 +90,16 @@ const Navbar = () => {
         </Badge>
 
         {email ? (
-          <Button onClick={logout} sx={{ my: 2, display: "block" }}>
+          <Button
+            className="navbar_btns"
+            onClick={logout}
+            sx={{ my: 2, display: "block" }}
+          >
             Logout
           </Button>
         ) : (
           <Button
+            className="navbar_btns"
             onClick={() => navigate("/auth")}
             sx={{ my: 2, display: "block" }}
           >

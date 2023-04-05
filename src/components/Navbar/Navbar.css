@@ -1,3 +1,6 @@
+* {
+  font-family: sans-serif;
+}
 .header {
   width: 90%;
   display: flex;
@@ -6,27 +9,36 @@
   margin-top: 30px;
   margin-bottom: 30px;
   margin-right: 0;
-  /* margin-left: 10%; */
+  margin-left: 50px;
+  border-bottom: 2px black solid;
 }
 #burger-menu {
   display: none;
 }
 nav {
-  width: 60%;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 5% 0 0;
+  width: 80%;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin: 0 4%;
+  margin-left: -3%;
+}
+span {
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: black;
   font-size: 25px;
-  margin: 0 5%;
+  margin: 0 4% 2px 4%;
 }
 
 .logo {
   width: 100px;
+}
+#navbar_icon {
+  display: none;
 }
 
 .search {
@@ -53,9 +65,9 @@ a {
 }
 
 .users_name {
-  margin-left: 30px;
   display: flex;
   width: 80px;
+  margin-right: -100px;
 }
 
 .lupa {
@@ -140,4 +152,33 @@ a {
 .alltext {
   display: flex;
   flex-direction: "row";
+}
+
+/* ! About us */
+
+@media all and (max-width: 426px) {
+  .about-h2 {
+    font-size: 30px !important;
+  }
+  .aboutUs_h3 {
+    width: 30px !important;
+    margin-left: 6px;
+  }
+  .about-p {
+    width: 200px !important;
+    text-align: left;
+    margin-left: -40px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .aboutUs_h3 {
+    margin-left: 3px;
+  }
+}
+
+@media all and (max-width: 376px) {
+  .about-p {
+    margin-left: -55px;
+  }
 }
