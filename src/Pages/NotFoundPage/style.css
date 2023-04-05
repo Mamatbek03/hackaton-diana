@@ -1,0 +1,85 @@
+.not-found {
+  background-color: rgb(219, 219, 219);
+  font-family: Rubik;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  gap: 30px;
+}
+
+.what {
+  font-size: 90px;
+  margin-top: 100px;
+}
+.text,
+.error {
+  margin-top: 230px;
+  font-size: 80px;
+}
+
+@media all and (max-width: 1025px) {
+  .what {
+    font-size: 80px;
+    margin-top: 100px;
+  }
+  .text {
+    margin-top: 220px;
+    font-size: 60px;
+  }
+}
+@media all and (max-width: 769px) {
+  .not-found {
+    display: flex;
+    flex-direction: column;
+  }
+  .what {
+    font-size: 90px;
+    margin-top: 150px;
+    margin-bottom: 0 !important;
+    margin: auto;
+  }
+  .text {
+    margin-top: 0 !important;
+    font-size: 70px;
+    margin: auto;
+  }
+}
+@media all and (max-width: 426px) {
+  .what {
+    font-size: 60px;
+    margin-top: 50px;
+    margin-bottom: 0 !important;
+    margin: auto;
+  }
+  .text {
+    margin-top: 0 !important;
+    font-size: 40px;
+    margin: auto;
+  }
+}
+@media all and (max-width: 376px) {
+  .what {
+    margin-top: 50px;
+  }
+  .text {
+    margin-top: 0 !important;
+    font-size: 35px;
+    margin: auto;
+  }
+  .not-found {
+    height: 270px;
+  }
+}
+@media all and (max-width: 321px) {
+  .what {
+    margin-top: 50px;
+    font-size: 50px;
+  }
+  .text {
+    font-size: 30px;
+    margin: auto;
+  }
+  .not-found {
+    height: 230px;
+  }
+}

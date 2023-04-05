@@ -1,18 +1,4 @@
 {
   "products": [
-    {
-      "name": "boots",
-      "gender": "woman",
-      "size": 35,
-      "color": "black",
-      "price": 120,
-      "description": "siwksfjiwjd",
-      "image": "https://i.pinimg.com/236x/cd/ee/36/cdee365e0329d17e5a31fd13a944604d.jpg",
-      "like": 0,
-      "comments": [
-        "ss"
-      ],
-      "id": 1
-    }
   ]
 }

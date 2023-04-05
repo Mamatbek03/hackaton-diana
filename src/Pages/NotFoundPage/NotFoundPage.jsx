@@ -1,22 +1,11 @@
 import React from "react";
-
+import "./style.css";
 const NotFoundPage = () => {
   return (
     <div>
-      <div
-        style={{
-          backgroundColor: "rgb(219, 219, 219)",
-          fontFamily: "Rubik",
-          fontSize: "40px",
-          display: "flex",
-          justifyContent: "center",
-          height: "400px",
-          gap: "30px",
-        }}
-      >
-        <h1>¯\_(ツ)_/¯</h1>
-        <h1 style={{ marginTop: "100px" }}>Page not found</h1>
-        <h1 style={{ marginTop: "100px" }}>404</h1>
+      <div className="not-found">
+        <h1 className="what">¯\_(ツ)_/¯</h1>
+        <h1 className="text">Page not found 404</h1>
       </div>
     </div>
   );
