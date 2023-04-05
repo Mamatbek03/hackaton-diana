@@ -50,6 +50,9 @@ const EditProduct = () => {
               {productDetails.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
+              {productDetails.like}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
               {productDetails.gender}
             </Typography>
             <Typography variant="body2" color="text.secondary">
