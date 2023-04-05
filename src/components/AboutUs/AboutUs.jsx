@@ -17,6 +17,7 @@ const AboutUs = () => {
       >
         <div class="about-us-header">
           <h2
+            class="about-h2"
             style={{
               fontSize: "50px",
               color: "black",
@@ -44,7 +45,7 @@ const AboutUs = () => {
               }}
             >
               <h3 class="aboutUs_h3">Our Story</h3>
-              <p>
+              <p class="about-p">
                 "We are a team of enthusiasts who exude a passion for sneakers.
                 We review this site to help people find the best models by
                 favorable prices. We work closely with manufacturers and are
@@ -53,13 +54,13 @@ const AboutUs = () => {
               </p>
 
               <h3 class="aboutUs_h3"> Our mission</h3>
-              <p>
+              <p class="about-p">
                 We strive to provide our customers with the best products and
                 services to improve their lives and businesses.
               </p>
 
               <h3 class="aboutUs_h3">Our Team</h3>
-              <p>
+              <p class="about-p">
                 "We are a team of professionals who share a passion for sneakers
                 and fashion. Our team includes experts in sales, marketing,
                 logistics and customer service. We We work to provide the
