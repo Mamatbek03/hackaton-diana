@@ -48,9 +48,9 @@ export default function ProductCard({ product }) {
     return product.like + 1;
   }
   return (
-    <Card className="Card" style={{ width: "400px", margin: "10px" }}>
+    <Card className="Card" style={{ width: "350px", margin: "10px" }}>
       <CardMedia
-        sx={{ height: "200px ", width: "400px" }}
+        sx={{ height: "200px ", width: "350px" }}
         image={product.image}
         title="green iguana"
       />
@@ -62,29 +62,34 @@ export default function ProductCard({ product }) {
           {product.color}
         </Typography>
       </CardContent>
-      <CardActions>
-        <IconButton onClick={() => addProductToReviews(product.id)}>
-          <BookmarkIcon
-            color={checkProductInReviews(product.id) ? "primary" : "white"}
-          />
-        </IconButton>
-        <IconButton onClick={() => addProductLike(product)}>
-          <FavoriteIcon
-            color={checkProductsLikes(product.id) ? "error" : "white"}
-          />
-          {checkProductsLikes(product.id) ? addLike() : product.like}
-        </IconButton>
+      <CardActions sx={{ display: "block" }}>
+        <div style={{ display: "flex", justifyContent: "end" }}>
+          <IconButton onClick={() => addProductToCart(product)}>
+            <AddShoppingCartIcon
+              color={checkProductInCart(product.id) ? "primary" : ""}
+            />
+          </IconButton>
+          <IconButton onClick={() => addProductToReviews(product.id)}>
+            <BookmarkIcon
+              color={checkProductInReviews(product.id) ? "primary" : "white"}
+            />
+          </IconButton>
+          <IconButton onClick={() => addProductLike(product)}>
+            <FavoriteIcon
+              color={checkProductsLikes(product.id) ? "error" : "white"}
+            />
+            {checkProductsLikes(product.id) ? addLike() : product.like}
+          </IconButton>
 
-        <Button onClick={() => navigate(`/details/${product.id}`)} size="small">
-          Reviews
-        </Button>
-        <IconButton onClick={() => addProductToCart(product)}>
-          <AddShoppingCartIcon
-            color={checkProductInCart(product.id) ? "primary" : ""}
-          />
-        </IconButton>
+          <Button
+            onClick={() => navigate(`/details/${product.id}`)}
+            size="small"
+          >
+            Details
+          </Button>
+        </div>
         {email === ADMIN ? (
-          <>
+          <div style={{ display: "flex", justifyContent: "end" }}>
             <Button
               onClick={() => {
                 navigate(`/edit/${product.id}`);
@@ -96,7 +101,7 @@ export default function ProductCard({ product }) {
             <Button onClick={() => deleteProduct(product.id)} size="small">
               Delete
             </Button>
-          </>
+          </div>
         ) : null}
       </CardActions>
     </Card>
