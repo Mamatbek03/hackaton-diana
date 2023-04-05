@@ -49,10 +49,12 @@ const Navbar = () => {
 
   return (
     <div className="header">
-      <BurgerMenu id="burger-menu" />
+      <div id="burger-menu">
+        <BurgerMenu />
+      </div>
       <nav>
         {pages.map((page) => (
-          <Link key={page.id} to={page.link}>
+          <Link sx={{ fontSize: "30px" }} key={page.id} to={page.link}>
             {page.name}
           </Link>
         ))}
@@ -66,17 +68,22 @@ const Navbar = () => {
           </span>
         ) : null}
       </nav>
-      <div className="search">
+      {/* <div className="search">
         <input
           className="inp-search"
           type="text"
           placeholder="поиск по каталогу"
         />
         <img className="lupa" src={lupa} alt="" />
-      </div>
+      </div> */}
       <div className="users_name">
         <Badge
-          sx={{ width: 30, height: 30, marginTop: 1, marginRight: 2 }}
+          sx={{
+            width: "30px",
+            height: "30px",
+            marginTop: "18px",
+            marginRight: "20px",
+          }}
           badgeContent={count}
           color="primary"
         >
