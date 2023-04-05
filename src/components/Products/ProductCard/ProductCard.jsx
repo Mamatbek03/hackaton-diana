@@ -16,7 +16,7 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { useEffect } from "react";
 import { ADMIN } from "../../../helpers/consts";
 import { useAuth } from "../../../contexts/AuthContextProvider";
-
+import "./styles.css";
 export default function ProductCard({ product }) {
   // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
@@ -48,10 +48,18 @@ export default function ProductCard({ product }) {
     return product.like + 1;
   }
   return (
-    <Card className="Card" style={{ width: "350px", margin: "10px" }}>
+    <Card
+      className="card"
+      sx={{
+        width: { sm: "350px", md: "350px", lg: "350px" },
+        margin: "10px",
+        height: { sm: "350px", md: "350px" },
+      }}
+    >
       <CardMedia
+        className="card-media"
         sx={{ height: "200px ", width: "350px" }}
-        image={product.image}
+        src={product.image}
         title="green iguana"
       />
       <CardContent>
@@ -64,17 +72,26 @@ export default function ProductCard({ product }) {
       </CardContent>
       <CardActions sx={{ display: "block" }}>
         <div style={{ display: "flex", justifyContent: "end" }}>
-          <IconButton onClick={() => addProductToCart(product)}>
+          <IconButton
+            sx={{ margin: "0 5px 0 5px" }}
+            onClick={() => addProductToCart(product)}
+          >
             <AddShoppingCartIcon
               color={checkProductInCart(product.id) ? "primary" : ""}
             />
           </IconButton>
-          <IconButton onClick={() => addProductToReviews(product.id)}>
+          <IconButton
+            sx={{ margin: "0 5px 0 5px" }}
+            onClick={() => addProductToReviews(product.id)}
+          >
             <BookmarkIcon
               color={checkProductInReviews(product.id) ? "primary" : "white"}
             />
           </IconButton>
-          <IconButton onClick={() => addProductLike(product)}>
+          <IconButton
+            sx={{ margin: "0 5px 0 5px" }}
+            onClick={() => addProductLike(product)}
+          >
             <FavoriteIcon
               color={checkProductsLikes(product.id) ? "error" : "white"}
             />
@@ -82,15 +99,27 @@ export default function ProductCard({ product }) {
           </IconButton>
 
           <Button
+            sx={{
+              margin: "0 5px 0 5px",
+              backgroundColor: "gold",
+              color: "black",
+            }}
             onClick={() => navigate(`/details/${product.id}`)}
             size="small"
           >
-            Details
+            Favorites
           </Button>
         </div>
         {email === ADMIN ? (
-          <div style={{ display: "flex", justifyContent: "end" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "end",
+              marginTop: "20px",
+            }}
+          >
             <Button
+              sx={{ backgroundColor: "green", color: "white", mx: 3 }}
               onClick={() => {
                 navigate(`/edit/${product.id}`);
               }}
@@ -98,7 +127,11 @@ export default function ProductCard({ product }) {
             >
               Edit
             </Button>
-            <Button onClick={() => deleteProduct(product.id)} size="small">
+            <Button
+              sx={{ backgroundColor: "pink", color: "black", mx: 1 }}
+              onClick={() => deleteProduct(product.id)}
+              size="small"
+            >
               Delete
             </Button>
           </div>
