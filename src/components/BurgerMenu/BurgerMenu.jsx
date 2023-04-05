@@ -41,7 +41,7 @@ export default function MenuListComposition() {
         onClick={handleClick}
         sx={{ borderRadius: 0 }}
       >
-        <h3 style={{ margin: "0 ", fontSize: "30px" }}>≡</h3>
+        <h3 style={{ margin: "0 ", padding: "0 ", fontSize: "30px" }}>≡</h3>
       </button>
       <Popup
         role={undefined}
