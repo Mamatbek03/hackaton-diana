@@ -1,0 +1,20 @@
+.category-list {
+  margin: 30px 0 30px 10%;
+}
+@media all and (max-width: 426px) {
+  .category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .grid {
+    width: 100% !important;
+  }
+  .category-list {
+    margin: 30px 30px;
+    width: 100%;
+  }
+  .category-item {
+    margin: 30px 0;
+  }
+}

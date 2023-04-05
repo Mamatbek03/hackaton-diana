@@ -38,20 +38,25 @@ const ProductList = () => {
     <div className="list_wrapper" style={{ display: "flex" }}>
       <SideBar />
       <div className="list_item">
-        <Stack spacing={1}>
-          <Pagination
-            onChange={handlePage}
-            page={page}
-            count={count}
-            variant="outlined"
-            shape="rounded"
-            sx={{ marginLeft: "470px" }}
-          />
-        </Stack>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div
+          className="product-card"
+          style={{ display: "flex", flexWrap: "wrap" }}
+        >
           {currentData().map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}{" "}
+        </div>
+        <div className="pagination">
+          <Stack spacing={1}>
+            <Pagination
+              onChange={handlePage}
+              page={page}
+              count={count}
+              variant="outlined"
+              shape="rounded"
+              sx={{ display: "flex", justifyContent: "center" }}
+            />
+          </Stack>
         </div>
       </div>
     </div>

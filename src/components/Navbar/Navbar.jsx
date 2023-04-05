@@ -46,6 +46,9 @@ const Navbar = () => {
     logout,
     user: { email },
   } = useAuth();
+  useEffect(() => {
+    console.log(email);
+  }, [email]);
 
   return (
     <div className="header">

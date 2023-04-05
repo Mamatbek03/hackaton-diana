@@ -115,5 +115,38 @@ background-color: rgb(219, 219, 219);
         margin-top: 50px;
         margin-left: 20px;
     }
+    button{
+        background-color: black;
+        color: white;
+        border-radius: 10px;
+    }
   
+}
+@media all and (max-width: 426px){
+    .footer-blue{
+        margin-top: 10%;
+        margin-left: 10px;
+    }
+    .footer-black-right{
+        margin-top: -150px;
+        margin-left: 20px;
+    }
+    .footer-text{
+        font-size: 14px;
+        width: 60%;
+    }
+    .Footer-links{
+        font-size: 14px;
+        width: 30%;
+        margin-top: 40px;
+    }
+    .footer-blue-text{
+        height: 250px;
+    }
+    
+}
+@media all and (max-width: 320px){
+    .footer-black-right{
+        margin-top: -150px;
+    }
 }
