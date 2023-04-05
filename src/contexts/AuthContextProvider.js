@@ -61,7 +61,7 @@ const AuthContextProvider = ({ children }) => {
             break;
         }
       });
-    navigate("/home");
+    navigate("/");
   };
 
   const login = () => {

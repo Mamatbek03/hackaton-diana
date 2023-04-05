@@ -8,12 +8,12 @@ import { useSearchParams } from "react-router-dom";
 import SideBar from "../SideBar/SideBar";
 
 const ProductList = () => {
-  const { getProducts, products } = useProduct();
+  const { getProducts, products, getLikes } = useProduct();
   const [page, setPage] = useState(1);
   const shoesPerPage = 9;
   const count = Math.ceil(products.length / shoesPerPage);
 
-  const searchParams = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     getProducts();
@@ -35,11 +35,30 @@ const ProductList = () => {
 
   return (
     <Box>
-      <Container sx={{ width: "100%", display: "flex", flexWrap: "wrap" }}>
+      <Container
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          // maxWidth: "1000px",
+          // flexWrap: "wrap",
+          // overflowX: "auto",
+        }}
+      >
         <SideBar />
-        {currentData().map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {currentData().map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
 
         <Stack spacing={1}>
           <Pagination

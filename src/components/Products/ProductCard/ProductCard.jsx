@@ -13,23 +13,39 @@ import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { ADMIN } from "../../../helpers/consts";
 import { useAuth } from "../../../contexts/AuthContextProvider";
+import { useEffect } from "react";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 
 export default function ProductCard({ product }) {
-  const [flag, setFlag] = useState(true);
+  // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
-  const { deleteProduct, getProductForComments, addProductToReviews } =
-    useProduct();
+  const {
+    deleteProduct,
+    addProductToReviews,
+    checkProductInReviews,
+    checkProductsLikes,
+    addProductLike,
+    saveEditProduct,
+    getProductForEdit,
+    productForEdit,
+  } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
-  const toggle = (flag) => {
-    if (flag && !JSON.parse(localStorage.getItem("reviews"))) {
-      addProductToReviews(product.id);
-    }
-    return flag ? setFlag(false) : setFlag(true);
-  };
+
   const {
     user: { email },
   } = useAuth();
+  const [changeProduct, setChangeProduct] = useState(productForEdit);
+  useEffect(() => {
+    getProductForEdit(product.id);
+  }, []);
+  useEffect(() => {
+    getProductForEdit(productForEdit);
+  }, [productForEdit]);
 
+  function addLike() {
+    console.log(changeProduct);
+    return product.like + 1;
+  }
   return (
     <Container>
       <Card className="Card" style={{ width: "350px", margin: "10px" }}>
@@ -47,8 +63,16 @@ export default function ProductCard({ product }) {
           </Typography>
         </CardContent>
         <CardActions>
-          <IconButton onClick={() => toggle(flag)}>
-            <FavoriteIcon color={flag ? "white" : "error"} />
+          <IconButton onClick={() => addProductToReviews(product.id)}>
+            <BookmarkIcon
+              color={checkProductInReviews(product.id) ? "primary" : "white"}
+            />
+          </IconButton>
+          <IconButton onClick={() => addProductLike(product)}>
+            <FavoriteIcon
+              color={checkProductsLikes(product.id) ? "error" : "white"}
+            />
+            {checkProductsLikes(product.id) ? addLike() : product.like}
           </IconButton>
 
           <Button

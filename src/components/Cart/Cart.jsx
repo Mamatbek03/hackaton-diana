@@ -31,7 +31,7 @@ export default function Cart() {
   }, []);
 
   return (
-    <TableContainer component={Paper} sx={{ mb: 30 }}>
+    <TableContainer component={Paper} sx={{ height: "500px" }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -80,7 +80,16 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-      <Button onClick={() => navigate("/form-order")}>
+      <Button
+        sx={{
+          backgroundColor: "rgb(109, 111, 249)",
+          color: "white",
+          padding: "10px",
+          borderRadius: "10px",
+          marginTop: "3%",
+        }}
+        onClick={() => navigate("/form-order")}
+      >
         {" "}
         BUY NOW FOR {cart?.totalPrice}
       </Button>

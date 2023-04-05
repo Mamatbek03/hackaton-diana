@@ -18,7 +18,12 @@ const Footer = () => {
             <span>Sign up for free! </span>
             <button>Sign up</button>
           </div>
-          <img className="logo-footer" src={logo} alt="" />
+          <img
+            className="logo-footer"
+            style={{ width: "36%" }}
+            src={logo}
+            alt=""
+          />
         </div>
 
         <div className="footer-black-right">

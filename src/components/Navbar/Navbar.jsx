@@ -20,8 +20,9 @@ import { ADMIN } from "../../helpers/consts";
 const pages = [
   { name: <img className="logo" src={logo} alt="" />, link: "/", id: 1 },
   { name: "Catalog", link: "/products", id: 2 },
-  { name: "AboutUs", link: "/AboutUs", id: 3 },
-  { name: "Contacts", link: "/contacts", id: 4 },
+  { name: "Reviews", link: "/reviews", id: 3 },
+  { name: "AboutUs", link: "/AboutUs", id: 4 },
+  { name: "Contacts", link: "/contacts", id: 5 },
 ];
 
 const Navbar = () => {
@@ -69,7 +70,6 @@ const Navbar = () => {
         >
           <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
         </Badge>
-        <AuthGoogle />
 
         {email ? (
           <Button onClick={logout} sx={{ my: 2, display: "block" }}>
