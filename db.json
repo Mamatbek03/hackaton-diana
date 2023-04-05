@@ -1,6 +1,7 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "name": "ghjk",
       "gender": "hnjk",
       "size": null,
@@ -10,6 +11,19 @@
       "image": "tyui",
       "like": 1,
       "comments": [],
+=======
+      "name": "nike",
+      "gender": "woman",
+      "size": 37,
+      "color": "black",
+      "price": 90,
+      "description": "good",
+      "image": "https://i.pinimg.com/236x/92/0a/06/920a0615ba1dfad0d6712d73920c32ff.jpg",
+      "like": 0,
+      "comments": [
+        "very goooood"
+      ],
+>>>>>>> 6a60d5f4c0022a523f67a7863a67489b806a36fd
       "id": 1
     },
     {

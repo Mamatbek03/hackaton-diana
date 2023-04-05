@@ -35,30 +35,12 @@ const ProductList = () => {
 
   return (
     <Box>
-      <Container
-        sx={{
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          // maxWidth: "1000px",
-          // flexWrap: "wrap",
-          // overflowX: "auto",
-        }}
-      >
+      <Container>
         <SideBar />
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          {currentData().map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+
+        {currentData().map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
 
         <Stack spacing={1}>
           <Pagination
