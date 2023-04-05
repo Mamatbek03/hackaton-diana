@@ -9,7 +9,9 @@
       "description": "good",
       "image": "https://i.pinimg.com/236x/92/0a/06/920a0615ba1dfad0d6712d73920c32ff.jpg",
       "like": 0,
-      "comments": [],
+      "comments": [
+        "very goooood"
+      ],
       "id": 1
     },
     {
@@ -33,7 +35,10 @@
       "description": "h",
       "image": "h",
       "like": 0,
-      "comments": [],
+      "comments": [
+        "dxfcgjhkm",
+        "very goob "
+      ],
       "id": 3
     }
   ]

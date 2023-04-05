@@ -17,6 +17,7 @@ const EditProduct = () => {
   useEffect(() => {
     setEditProduct(productForEdit);
   }, [productForEdit]);
+
   console.log(editProduct);
   function handleInput(e) {
     if (e.target.name === "size") {
