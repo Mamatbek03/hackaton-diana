@@ -73,21 +73,9 @@ const HomePage = () => {
           }}
         >
           <div className="card" style={{ display: "flex", gap: "30px" }}>
-            <img
-              style={{ width: "400px", height: "450px" }}
-              src={review1}
-              alt=""
-            />
-            <img
-              style={{ width: "400px", height: "450px" }}
-              src={review2}
-              alt=""
-            />
-            <img
-              style={{ width: "400px", height: "450px" }}
-              src={review3}
-              alt=""
-            />
+            <img style={{ width: "30%", height: "35%" }} src={review1} alt="" />
+            <img style={{ width: "30%", height: "35%" }} src={review2} alt="" />
+            <img style={{ width: "30%", height: "35%" }} src={review3} alt="" />
           </div>
         </div>
       </div>

@@ -12,18 +12,13 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-blue">
           <div className="footer-blue-text">
-            <h3>
+            <h3 className="h3-footer">
               JOIN OUR KICKSPLUS <br /> CLUB & GET 15% OFF{" "}
             </h3>
             <span>Sign up for free! </span>
             <button>Sign up</button>
           </div>
-          <img
-            className="logo-footer"
-            style={{ width: "36%" }}
-            src={logo}
-            alt=""
-          />
+          <img className="logo-footer" src={logo} alt="" />
         </div>
 
         <div className="footer-black-right">
