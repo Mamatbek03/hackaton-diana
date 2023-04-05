@@ -18,11 +18,13 @@ import { useEffect } from "react";
 import { ADMIN } from "../../../helpers/consts";
 
 export default function ProductCard({ product }) {
+
   const {
     user: { email },
   } = useAuth();
-  // const [flag, setFlag] = useState(true);
   const navigate = useNavigate();
+
+
   const {
     deleteProduct,
     addProductToReviews,
@@ -43,13 +45,25 @@ export default function ProductCard({ product }) {
   }, [productForEdit]);
 
   function addLike() {
-    console.log(changeProduct);
     return product.like + 1;
   }
+  console.log(email);
+  useEffect(() => {
+    console.log(email);
+  }, [email]);
   return (
-    <Card className="Card" style={{ width: "400px", margin: "10px" }}>
+    <Card
+      className="card"
+      sx={{
+        width: "350px",
+        margin: "10px",
+        height: "350px",
+      }}
+    >
       <CardMedia
-        sx={{ height: "200px ", width: "400px" }}
+        className="card-media"
+        sx={{ height: "200px ", width: "350px" }}
+
         image={product.image}
         title="green iguana"
       />
@@ -61,27 +75,47 @@ export default function ProductCard({ product }) {
           {product.color}
         </Typography>
       </CardContent>
-      <CardActions>
-        <IconButton onClick={() => addProductToReviews(product.id)}>
-          <BookmarkIcon
-            color={checkProductInReviews(product.id) ? "primary" : "white"}
-          />
-        </IconButton>
-        <IconButton onClick={() => addProductLike(product)}>
-          <FavoriteIcon
-            color={checkProductsLikes(product.id) ? "error" : "white"}
-          />
-          {checkProductsLikes(product.id) ? addLike() : product.like}
-        </IconButton>
+      <CardActions sx={{ display: "block" }}>
+        <div style={{ display: "flex", justifyContent: "end" }}>
+          <IconButton
+            sx={{ margin: "0 5px " }}
+            onClick={() => addProductToCart(product)}
+          >
+            <AddShoppingCartIcon
+              color={checkProductInCart(product.id) ? "primary" : ""}
+            />
+          </IconButton>
+          <IconButton
+            sx={{ margin: "0 5px 0 5px" }}
+            onClick={() => addProductToReviews(product.id)}
+          >
+            <BookmarkIcon
+              color={checkProductInReviews(product.id) ? "primary" : "white"}
+            />
+          </IconButton>
+          <IconButton
+            sx={{ margin: "0 5px 0 5px" }}
+            onClick={() => addProductLike(product)}
+          >
+            <FavoriteIcon
+              color={checkProductsLikes(product.id) ? "error" : "white"}
+            />
+            {checkProductsLikes(product.id) ? addLike() : product.like}
+          </IconButton>
 
-        <Button onClick={() => navigate(`/details/${product.id}`)} size="small">
-          Reviews
-        </Button>
-        <IconButton onClick={() => addProductToCart(product)}>
-          <AddShoppingCartIcon
-            color={checkProductInCart(product.id) ? "primary" : ""}
-          />
-        </IconButton>
+          <Button
+            sx={{
+              margin: "0 5px 0 5px",
+              backgroundColor: "gold",
+              color: "black",
+            }}
+            onClick={() => navigate(`/details/${product.id}`)}
+            size="small"
+          >
+            Details
+          </Button>
+        </div>
+
         {email === ADMIN ? (
           <>
             {" "}

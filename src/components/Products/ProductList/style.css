@@ -1,1 +1,18 @@
-
+.pagination {
+  margin-left: 9%;
+}
+@media all and (max-width: 769px) {
+  .product-card {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (max-width: 426px) {
+  .list_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .pagination {
+    margin-left: 30%;
+  }
+}

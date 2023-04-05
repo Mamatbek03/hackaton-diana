@@ -1,18 +1,5 @@
 {
   "products": [
-    {
-      "name": "гцшг",
-      "gender": "аладффа",
-      "size": null,
-      "color": "к3к23к2к",
-      "price": null,
-      "description": "3к23к",
-      "image": "https://i.pinimg.com/236x/5b/d8/64/5bd864d37992722b8d5bf513f49705d0.jpg",
-      "like": 0,
-      "comments": [
-        "вцвцв"
-      ],
-      "id": 1
-    }
+  
   ]
 }
