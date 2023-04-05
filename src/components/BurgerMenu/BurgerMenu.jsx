@@ -5,18 +5,47 @@ import { styled } from "@mui/joy/styles";
 import Button from "@mui/joy/Button";
 import MenuList from "@mui/joy/MenuList";
 import MenuItem from "@mui/joy/MenuItem";
-
+import "./BurgerMenu.css";
+import { useNavigate } from "react-router-dom";
+import { ADMIN } from "../../helpers/consts";
+import { useAuth } from "../../contexts/AuthContextProvider";
 const Popup = styled(PopperUnstyled)({
   zIndex: 1000,
 });
 
 export default function MenuListComposition() {
+  const navigate = useNavigate();
+  const {
+    user: { email },
+  } = useAuth();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleClose = (e) => {
+    setAnchorEl(null);
+  };
+
+  const changePageCatalog = (e) => {
+    navigate("/products");
+    setAnchorEl(null);
+  };
+  const changePageReviews = (e) => {
+    navigate("/reviews");
+    setAnchorEl(null);
+  };
+  const changePageAboutUs = (e) => {
+    navigate("/AboutUs");
+    setAnchorEl(null);
+  };
+  const changePageContacts = (e) => {
+    navigate("/contacts");
+    setAnchorEl(null);
+  };
+  const changePageAdminPage = (e) => {
+    navigate("/admin-page");
     setAnchorEl(null);
   };
 
@@ -32,16 +61,16 @@ export default function MenuListComposition() {
   return (
     <div>
       <button
-        id="composition-button"
+        id="burger-menu_btn"
         aria-controls={open ? "composition-menu" : undefined}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         variant="outlined"
         color="neutral"
         onClick={handleClick}
-        sx={{ borderRadius: 0 }}
+        sx={{ borderRadius: 0, padding: "0" }}
       >
-        <h3 style={{ margin: "0 ", padding: "0 ", fontSize: "30px" }}>≡</h3>
+        <p id="burger-menu_icon">≡</p>
       </button>
       <Popup
         role={undefined}
@@ -64,10 +93,13 @@ export default function MenuListComposition() {
             onKeyDown={handleListKeyDown}
             sx={{ boxShadow: "md", bgcolor: "background.body" }}
           >
-            <MenuItem onClick={handleClose}>Single</MenuItem>
-            <MenuItem onClick={handleClose}>1.15</MenuItem>
-            <MenuItem onClick={handleClose}>Double</MenuItem>
-            <MenuItem onClick={handleClose}>Custom: 1.2</MenuItem>
+            <MenuItem onClick={changePageCatalog}>Catalog</MenuItem>
+            <MenuItem onClick={changePageReviews}>Reviews</MenuItem>
+            <MenuItem onClick={changePageAboutUs}>AboutUs</MenuItem>
+            <MenuItem onClick={changePageContacts}>Contacts</MenuItem>
+            {email === ADMIN ? (
+              <MenuItem onClick={changePageAdminPage}>Admin Page</MenuItem>
+            ) : null}
           </MenuList>
         </ClickAwayListener>
       </Popup>
