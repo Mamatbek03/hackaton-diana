@@ -45,7 +45,7 @@ const ProductList = () => {
             count={count}
             variant="outlined"
             shape="rounded"
-            sx={{ marginLeft: "470px" }}
+            sx={{ display: "flex", justifyContent: "center" }}
           />
         </Stack>
         <div style={{ display: "flex", flexWrap: "wrap" }}>
