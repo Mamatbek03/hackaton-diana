@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./Navbarimages/KicksLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
+import "./Adapt.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
 import {
   Badge,
@@ -46,29 +47,9 @@ const Navbar = () => {
     user: { email },
   } = useAuth();
 
-  // const [city, setCity] = React.useState("");
-
-  // const handleChange = (event) => {
-  //   setCity(event.target.value);
-  // };
-
   return (
     <div className="header">
-      {/* <Select
-        labelId="demo-select-small"
-        id="demo-select-small"
-        value={city}
-        label="City"
-        onChange={handleChange}
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={1}>Bishkek</MenuItem>
-        <MenuItem value={2}>Osh</MenuItem>
-        <MenuItem value={3}>Naryn</MenuItem>
-      </Select> */}
-      <BurgerMenu />
+      <BurgerMenu id="burger-menu" />
       <nav>
         {pages.map((page) => (
           <Link key={page.id} to={page.link}>
