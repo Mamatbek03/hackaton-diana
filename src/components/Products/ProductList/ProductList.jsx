@@ -6,6 +6,7 @@ import AddProduct from "../AddProduct/AddProduct";
 import ProductCard from "../ProductCard/ProductCard";
 import { useSearchParams } from "react-router-dom";
 import SideBar from "../SideBar/SideBar";
+import "./style.css";
 
 const ProductList = () => {
   const { getProducts, products, getLikes } = useProduct();
@@ -34,14 +35,9 @@ const ProductList = () => {
   }
 
   return (
-    <Box>
-      <Container>
-        <SideBar />
-
-        {currentData().map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-
+    <div className="list_wrapper" style={{ display: "flex" }}>
+      <SideBar />
+      <div className="list_item">
         <Stack spacing={1}>
           <Pagination
             onChange={handlePage}
@@ -49,11 +45,16 @@ const ProductList = () => {
             count={count}
             variant="outlined"
             shape="rounded"
-            sx={{ marginTop: "500px", marginLeft: "-700px" }}
+            sx={{ marginLeft: "470px" }}
           />
         </Stack>
-      </Container>
-    </Box>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          {currentData().map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}{" "}
+        </div>
+      </div>
+    </div>
   );
 };
 
