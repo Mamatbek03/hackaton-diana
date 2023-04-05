@@ -9,7 +9,7 @@ const FormOrder = () => {
   const { cartCleaner, cart } = useCart();
   function handleBuy() {
     cartCleaner();
-    navigate("/home");
+    navigate("/");
   }
   return (
     <div
@@ -75,7 +75,7 @@ const FormOrder = () => {
             backgroundColor: "transparent",
             marginTop: "-20px",
           }}
-          type="number"
+          type="text"
           placeholder=" City"
         />
         <input
@@ -85,7 +85,7 @@ const FormOrder = () => {
             borderRadius: "5px",
             backgroundColor: "transparent",
           }}
-          type="number"
+          type="text"
           placeholder="Street"
         />
         <input
