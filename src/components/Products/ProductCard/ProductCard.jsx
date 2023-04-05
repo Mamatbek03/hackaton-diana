@@ -19,11 +19,12 @@ import { useAuth } from "../../../contexts/AuthContextProvider";
 import "./styles.css";
 export default function ProductCard({ product }) {
   // const [flag, setFlag] = useState(true);
-  const navigate = useNavigate();
   const {
     logout,
     user: { email },
   } = useAuth();
+  const navigate = useNavigate();
+
   const {
     deleteProduct,
     addProductToReviews,
@@ -44,22 +45,25 @@ export default function ProductCard({ product }) {
   }, [productForEdit]);
 
   function addLike() {
-    console.log(changeProduct);
     return product.like + 1;
   }
+  console.log(email);
+  useEffect(() => {
+    console.log(email);
+  }, [email]);
   return (
     <Card
       className="card"
       sx={{
-        width: { sm: "350px", md: "350px", lg: "350px" },
+        width: "350px",
         margin: "10px",
-        height: { sm: "350px", md: "350px" },
+        height: "350px",
       }}
     >
       <CardMedia
         className="card-media"
         sx={{ height: "200px ", width: "350px" }}
-        src={product.image}
+        image={product.image}
         title="green iguana"
       />
       <CardContent>
@@ -73,7 +77,7 @@ export default function ProductCard({ product }) {
       <CardActions sx={{ display: "block" }}>
         <div style={{ display: "flex", justifyContent: "end" }}>
           <IconButton
-            sx={{ margin: "0 5px 0 5px" }}
+            sx={{ margin: "0 5px " }}
             onClick={() => addProductToCart(product)}
           >
             <AddShoppingCartIcon
@@ -107,7 +111,7 @@ export default function ProductCard({ product }) {
             onClick={() => navigate(`/details/${product.id}`)}
             size="small"
           >
-            Favorites
+            Details
           </Button>
         </div>
         {email === ADMIN ? (
