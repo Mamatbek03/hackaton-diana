@@ -1,0 +1,75 @@
+.allPage{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-family: "Rubik";
+    margin-left: 8%;
+    height: auto;
+}
+
+.comments{
+    width: 300px;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(226, 226, 226, 0.386);
+    margin-bottom: 10%;
+
+}
+.comments > :first-child{
+    margin-top: 10px;
+}
+@media all and (max-width: 1025px){
+    .allPage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 25%;
+    }
+    .comments{
+        margin-left: 10%;
+        width: 300px;
+    }
+
+}
+
+@media all and (max-width: 768px){
+    .allPage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .comments{
+        width: 280px;
+    }
+
+}
+@media all and (max-width: 426px){
+    .allPage{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+   
+    }
+
+}
+@media all and (max-width: 376px){
+    .allPage{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+   
+    }
+
+}
+@media all and (max-width: 321px){
+    .allPage{
+        display: flex;
+        flex-direction: column;
+        margin-left: -20px;
+   
+    }
+
+}
