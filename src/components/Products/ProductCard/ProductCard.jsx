@@ -11,10 +11,9 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import { ADMIN } from "../../../helpers/consts";
-import { useAuth } from "../../../contexts/AuthContextProvider";
-import { useEffect } from "react";
+
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { useEffect } from "react";
 
 export default function ProductCard({ product }) {
   // const [flag, setFlag] = useState(true);
@@ -30,10 +29,6 @@ export default function ProductCard({ product }) {
     productForEdit,
   } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
-
-  const {
-    user: { email },
-  } = useAuth();
   const [changeProduct, setChangeProduct] = useState(productForEdit);
   useEffect(() => {
     getProductForEdit(product.id);
@@ -47,65 +42,53 @@ export default function ProductCard({ product }) {
     return product.like + 1;
   }
   return (
-    <Container>
-      <Card className="Card" style={{ width: "350px", margin: "10px" }}>
-        <CardMedia
-          sx={{ height: "200px ", width: "350px" }}
-          image={product.image}
-          title="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {product.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {product.color}
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <IconButton onClick={() => addProductToReviews(product.id)}>
-            <BookmarkIcon
-              color={checkProductInReviews(product.id) ? "primary" : "white"}
-            />
-          </IconButton>
-          <IconButton onClick={() => addProductLike(product)}>
-            <FavoriteIcon
-              color={checkProductsLikes(product.id) ? "error" : "white"}
-            />
-            {checkProductsLikes(product.id) ? addLike() : product.like}
-          </IconButton>
+    <Card className="Card" style={{ width: "350px", margin: "10px" }}>
+      <CardMedia
+        sx={{ height: "200px ", width: "350px" }}
+        image={product.image}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {product.name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {product.color}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <IconButton onClick={() => addProductToReviews(product.id)}>
+          <BookmarkIcon
+            color={checkProductInReviews(product.id) ? "primary" : "white"}
+          />
+        </IconButton>
+        <IconButton onClick={() => addProductLike(product)}>
+          <FavoriteIcon
+            color={checkProductsLikes(product.id) ? "error" : "white"}
+          />
+          {checkProductsLikes(product.id) ? addLike() : product.like}
+        </IconButton>
 
-          <Button
-            onClick={() => navigate(`/details/${product.id}`)}
-            size="small"
-          >
-            Reviews
-          </Button>
-
-          <IconButton onClick={() => addProductToCart(product)}>
-            <AddShoppingCartIcon
-              color={checkProductInCart(product.id) ? "primary" : ""}
-            />
-          </IconButton>
-
-          {email === ADMIN ? (
-            <>
-              {" "}
-              <Button
-                onClick={() => {
-                  navigate(`/edit/${product.id}`);
-                }}
-                size="small"
-              >
-                Edit
-              </Button>
-              <Button onClick={() => deleteProduct(product.id)} size="small">
-                Delete
-              </Button>
-            </>
-          ) : null}
-        </CardActions>
-      </Card>
-    </Container>
+        <Button onClick={() => navigate(`/details/${product.id}`)} size="small">
+          Reviews
+        </Button>
+        <IconButton onClick={() => addProductToCart(product)}>
+          <AddShoppingCartIcon
+            color={checkProductInCart(product.id) ? "primary" : ""}
+          />
+        </IconButton>
+        <Button
+          onClick={() => {
+            navigate(`/edit/${product.id}`);
+          }}
+          size="small"
+        >
+          Edit
+        </Button>
+        <Button onClick={() => deleteProduct(product.id)} size="small">
+          Delete
+        </Button>
+      </CardActions>
+    </Card>
   );
 }

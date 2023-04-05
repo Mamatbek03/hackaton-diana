@@ -1,6 +1,7 @@
 {
   "products": [
     {
+<<<<<<< HEAD
       "name": "hHhhH",
       "gender": "h",
       "size": null,
@@ -8,11 +9,21 @@
       "price": null,
       "description": "h",
       "image": "h",
+=======
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+>>>>>>> 15d4effc279d1ed537b19d5eb690b6fdc7d4c7a4
       "like": 0,
       "comments": [],
       "id": 1
     },
     {
+<<<<<<< HEAD
       "name": "diana",
       "gender": "dirl",
       "size": 56,
@@ -35,6 +46,138 @@
       "like": 0,
       "comments": [],
       "id": 3
+=======
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+    },
+    {
+      "name": "ergw",
+      "gender": "fb",
+      "size": null,
+      "color": "dfb",
+      "price": null,
+      "description": "s",
+      "image": "d",
+      "like": 0,
+      "comments": [],
+      "id": 1
+>>>>>>> 15d4effc279d1ed537b19d5eb690b6fdc7d4c7a4
     }
   ]
 }
