@@ -8,7 +8,7 @@ import { useSearchParams } from "react-router-dom";
 import SideBar from "../SideBar/SideBar";
 
 const ProductList = () => {
-  const { getProducts, products } = useProduct();
+  const { getProducts, products, getLikes } = useProduct();
   const [page, setPage] = useState(1);
   const shoesPerPage = 9;
   const count = Math.ceil(products.length / shoesPerPage);
