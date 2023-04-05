@@ -49,10 +49,19 @@ const Navbar = () => {
 
   return (
     <div className="header">
-      <BurgerMenu id="burger-menu" />
+      <div id="burger-menu">
+        <div id="wrapper">
+          <BurgerMenu />
+        </div>
+      </div>
+      <div id="navbar_icon">
+        <div id="navbar_logo">
+          <img className="logo" src={logo} alt="" />
+        </div>
+      </div>
       <nav>
         {pages.map((page) => (
-          <Link key={page.id} to={page.link}>
+          <Link sx={{ fontSize: "30px" }} key={page.id} to={page.link}>
             {page.name}
           </Link>
         ))}
@@ -61,22 +70,19 @@ const Navbar = () => {
             onClick={() => navigate("/admin-page")}
             sx={{ cursor: "pointer" }}
           >
-            {" "}
             Admin page
           </span>
         ) : null}
       </nav>
-      <div className="search">
-        <input
-          className="inp-search"
-          type="text"
-          placeholder="поиск по каталогу"
-        />
-        <img className="lupa" src={lupa} alt="" />
-      </div>
+
       <div className="users_name">
         <Badge
-          sx={{ width: 30, height: 30, marginTop: 1, marginRight: 2 }}
+          sx={{
+            width: "30px",
+            height: "30px",
+            marginTop: "18px",
+            marginRight: "20px",
+          }}
           badgeContent={count}
           color="primary"
         >
@@ -84,11 +90,16 @@ const Navbar = () => {
         </Badge>
 
         {email ? (
-          <Button onClick={logout} sx={{ my: 2, display: "block" }}>
+          <Button
+            className="navbar_btns"
+            onClick={logout}
+            sx={{ my: 2, display: "block" }}
+          >
             Logout
           </Button>
         ) : (
           <Button
+            className="navbar_btns"
             onClick={() => navigate("/auth")}
             sx={{ my: 2, display: "block" }}
           >
