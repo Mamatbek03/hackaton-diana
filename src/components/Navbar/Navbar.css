@@ -54,13 +54,10 @@ a {
   width: 20px;
 }
 
-
-
 .about-us-header {
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Rubik';
-  
+  font-family: "Rubik";
 }
 
 .about-us-header h2 {
@@ -132,8 +129,7 @@ a {
   margin-left: 7%;
 }
 
-.alltext{
+.alltext {
   display: flex;
-  flex-direction: "row",
-
+  flex-direction: "row";
 }

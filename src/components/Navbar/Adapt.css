@@ -1,0 +1,8 @@
+@media all and (max-width: 426px) {
+  #burger-menu {
+    display: none;
+  }
+  nav {
+    display: none;
+  }
+}
