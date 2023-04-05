@@ -36,6 +36,7 @@ export default function Cart() {
       <TableContainer
         className="table"
         component={Paper}
+   
         sx={{
           height: "auto",
           width: "100%",

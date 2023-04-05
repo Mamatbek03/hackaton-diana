@@ -14,7 +14,7 @@ const App = () => {
       <AuthContextProvider>
         <CardContextProvider>
           <ProductContextProvider>
-            {/* <Navbar /> */}
+            <Navbar />
             <MainRoutes />
             <Footer />
           </ProductContextProvider>

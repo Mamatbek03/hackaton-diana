@@ -14,14 +14,15 @@ const FormOrder = () => {
   }
   return (
     <div
-      className="all-form"
+
+      className="wrapp"
       style={{
         fontFamily: "Rubik",
         display: "flex",
         flexDirection: "row",
-        paddingLeft: "15%",
-        paddingBottom: "5%",
-        paddingTop: "5%",
+        // paddingLeft: "15%",
+        // paddingBottom: "5%",
+        // paddingTop: "5%",
         backgroundColor: "rgb(219, 219, 219)",
       }}
     >
@@ -53,6 +54,7 @@ const FormOrder = () => {
               width: "45%",
               borderRadius: "5px",
               backgroundColor: "transparent",
+              marginRight: "20px",
             }}
             type="text"
             placeholder="Full name"
@@ -77,7 +79,7 @@ const FormOrder = () => {
             backgroundColor: "transparent",
             marginTop: "-20px",
           }}
-          type="number"
+          type="text"
           placeholder=" City"
         />
         <input
@@ -87,7 +89,7 @@ const FormOrder = () => {
             borderRadius: "5px",
             backgroundColor: "transparent",
           }}
-          type="number"
+          type="text"
           placeholder="Street"
         />
         <input

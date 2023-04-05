@@ -1,0 +1,39 @@
+.admin_btn {
+  width: 150px;
+  font-size: small !important;
+}
+
+@media all and (max-width: 769px) {
+  .admin_btn {
+    margin-left: 30px;
+  }
+  h1 {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .admin_inp {
+    height: 13px;
+    margin-top: 23px !important;
+  }
+  .admin_btn {
+    font-size: 10px !important;
+    height: 30px !important;
+    margin-top: 30px !important ;
+  }
+
+  .wrap {
+    width: 400px !important;
+  }
+}
+
+@media all and (max-width: 426px) {
+  .wrap {
+    width: 70% !important;
+  }
+}
+
+@media all and (max-width: 321px) {
+  .wrap {
+    width: 80% !important;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./Navbarimages/KicksLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
+import "./Adapt.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
 import {
   Badge,
@@ -46,32 +47,21 @@ const Navbar = () => {
     user: { email },
   } = useAuth();
 
-  // const [city, setCity] = React.useState("");
-
-  // const handleChange = (event) => {
-  //   setCity(event.target.value);
-  // };
-
   return (
     <div className="header">
-      {/* <Select
-        labelId="demo-select-small"
-        id="demo-select-small"
-        value={city}
-        label="City"
-        onChange={handleChange}
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={1}>Bishkek</MenuItem>
-        <MenuItem value={2}>Osh</MenuItem>
-        <MenuItem value={3}>Naryn</MenuItem>
-      </Select> */}
-      <BurgerMenu />
+      <div id="burger-menu">
+        <div id="wrapper">
+          <BurgerMenu />
+        </div>
+      </div>
+      <div id="navbar_icon">
+        <div id="navbar_logo">
+          <img className="logo" src={logo} alt="" />
+        </div>
+      </div>
       <nav>
         {pages.map((page) => (
-          <Link key={page.id} to={page.link}>
+          <Link sx={{ fontSize: "30px" }} key={page.id} to={page.link}>
             {page.name}
           </Link>
         ))}
@@ -80,35 +70,36 @@ const Navbar = () => {
             onClick={() => navigate("/admin-page")}
             sx={{ cursor: "pointer" }}
           >
-            {" "}
             Admin page
           </span>
         ) : null}
       </nav>
-      <div className="search">
-        <input
-          className="inp-search"
-          type="text"
-          placeholder="поиск по каталогу"
-        />
-        <img className="lupa" src={lupa} alt="" />
-      </div>
+
       <div className="users_name">
         <Badge
-          sx={{ width: 30, height: 30, marginTop: 1, marginRight: 2 }}
+          sx={{
+            width: "30px",
+            height: "30px",
+            marginTop: "18px",
+            marginRight: "20px",
+          }}
           badgeContent={count}
           color="primary"
         >
           <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
         </Badge>
-        <AuthGoogle />
 
         {email ? (
-          <Button onClick={logout} sx={{ my: 2, display: "block" }}>
+          <Button
+            className="navbar_btns"
+            onClick={logout}
+            sx={{ my: 2, display: "block" }}
+          >
             Logout
           </Button>
         ) : (
           <Button
+            className="navbar_btns"
             onClick={() => navigate("/auth")}
             sx={{ my: 2, display: "block" }}
           >

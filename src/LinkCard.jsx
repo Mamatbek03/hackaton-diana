@@ -26,6 +26,14 @@ export default function PaymentForm() {
       >
         Card Details
       </h1>
+      <Cards
+        // sx={{ width: "50%" }}
+        cvc={state.cvc}
+        expiry={state.expiry}
+        focused={state.focus}
+        name={state.name}
+        number={state.number}
+      />
       <div
         id="PaymentForm"
         style={{
@@ -36,23 +44,16 @@ export default function PaymentForm() {
           paddingBottom: "70px",
         }}
       >
-        <Cards
-          cvc={state.cvc}
-          expiry={state.expiry}
-          focused={state.focus}
-          name={state.name}
-          number={state.number}
-        />
         <form
           style={{
             display: "flex",
             justifyContent: "center",
-            width: "19%",
+            width: "50%",
             flexDirection: "column",
             gap: "15px",
             alignSelf: "center",
-            paddingTop: "20px",
-            marginLeft: "35%",
+            paddingTop: "50px",
+            marginLeft: "28%",
           }}
         >
           <input
@@ -106,6 +107,11 @@ export default function PaymentForm() {
               alignSelf: "center",
               marginBottom: "40px",
               marginLeft: "-45px",
+              background: "orange",
+              border: "none",
+              borderRadius: 4,
+              height: "30px",
+              marginLeft: "5%",
             }}
             onClick={() => navigate("/form-order")}
           >
