@@ -3,7 +3,14 @@ import logo from "./Navbarimages/KicksLogo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import BackgroundLetterAvatars from "../Logo/Logo";
-import { Badge, Button, IconButton, Typography } from "@mui/material";
+import {
+  Badge,
+  Button,
+  IconButton,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
 import { ExitToAppOutlined } from "@mui/icons-material";
 import lupa from "./Navbarimages/icon.png";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
@@ -16,6 +23,8 @@ import AuthGoogle from "../Auth/AuthGoogle";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { display } from "@mui/system";
 import { ADMIN } from "../../helpers/consts";
+import MenuIcon from "@mui/icons-material/Menu";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const pages = [
   { name: <img className="logo" src={logo} alt="" />, link: "/", id: 1 },
@@ -36,8 +45,30 @@ const Navbar = () => {
     logout,
     user: { email },
   } = useAuth();
+
+  // const [city, setCity] = React.useState("");
+
+  // const handleChange = (event) => {
+  //   setCity(event.target.value);
+  // };
+
   return (
     <div className="header">
+      {/* <Select
+        labelId="demo-select-small"
+        id="demo-select-small"
+        value={city}
+        label="City"
+        onChange={handleChange}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        <MenuItem value={1}>Bishkek</MenuItem>
+        <MenuItem value={2}>Osh</MenuItem>
+        <MenuItem value={3}>Naryn</MenuItem>
+      </Select> */}
+      <BurgerMenu />
       <nav>
         {pages.map((page) => (
           <Link key={page.id} to={page.link}>
