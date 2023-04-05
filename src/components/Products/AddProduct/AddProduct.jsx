@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useProduct } from "../../../contexts/ProductContextProvider";
 
+import "../AddProduct/AddProduct.css";
+
 const AddProduct = () => {
   const navigate = useNavigate();
 
@@ -46,8 +48,9 @@ const AddProduct = () => {
         marginTop: "-35px",
       }}
     >
-      <Box>
+      <Box className="pizda">
         <Container
+          className="wrap"
           sx={{
             display: "flex",
             justifyContent: "center",

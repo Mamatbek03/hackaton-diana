@@ -24,7 +24,7 @@ const Contacts = () => {
           padding: "20px",
         }}
       >
-        <h1>Contact Us</h1>
+        <h1 className="contacts_us">Contact Us</h1>
       </div>
       <div
         className="contacts_wrapper"
@@ -44,7 +44,10 @@ const Contacts = () => {
             color: "black",
           }}
         >
-          <h3 style={{ padding: "15px 0 ", borderBottom: "2px solid orange" }}>
+          <h3
+            className="contacts-h3"
+            style={{ padding: "15px 0 ", borderBottom: "2px solid orange" }}
+          >
             BY PHONE
           </h3>
           <p>North America Toll-Free:</p>
@@ -63,15 +66,21 @@ const Contacts = () => {
             color: "black",
           }}
         >
-          <h3 style={{ padding: "15px 0", borderBottom: "2px solid orange" }}>
+          <h3
+            className="contacts-h3"
+            style={{ padding: "15px 0", borderBottom: "2px solid orange" }}
+          >
             START A NEW CASE{" "}
           </h3>
           <p>
             Just send us your questions or concerns by staring a new case and we
             will give yiu the help tou need
           </p>
-          <button style={{ marginLeft: "-5px", marginTop: "8px" }}>
-            Start Here
+          <button
+            className="contacts_button"
+            style={{ marginLeft: "-5px", marginTop: "8px" }}
+          >
+            Start
           </button>
         </div>
         <div
@@ -85,11 +94,16 @@ const Contacts = () => {
             color: "black",
           }}
         >
-          <h3 style={{ padding: "15px 0", borderBottom: "2px solid orange" }}>
+          <h3
+            className="contacts-h3"
+            style={{ padding: "15px 0", borderBottom: "2px solid orange" }}
+          >
             LIVE CHAT
           </h3>
           <p>Chat with a member of our in-house team</p>
-          <button style={{ marginTop: "26px" }}>Start Chat</button>
+          <button className="contacts_button" style={{ marginTop: "26px" }}>
+            Start
+          </button>
         </div>
       </div>
     </div>

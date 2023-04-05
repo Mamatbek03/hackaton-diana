@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../contexts/CartContextProvider";
 import { cartCleaner } from "../../helpers/functions";
-
+import "../FormOrder/FormOrder.css";
 const FormOrder = () => {
   const navigate = useNavigate();
   const { cartCleaner, cart } = useCart();
@@ -13,13 +13,14 @@ const FormOrder = () => {
   }
   return (
     <div
+      className="wrapp"
       style={{
         fontFamily: "Rubik",
         display: "flex",
         flexDirection: "row",
-        paddingLeft: "15%",
-        paddingBottom: "5%",
-        paddingTop: "5%",
+        // paddingLeft: "15%",
+        // paddingBottom: "5%",
+        // paddingTop: "5%",
         backgroundColor: "rgb(219, 219, 219)",
       }}
     >
@@ -51,6 +52,7 @@ const FormOrder = () => {
               width: "45%",
               borderRadius: "5px",
               backgroundColor: "transparent",
+              marginRight: "20px",
             }}
             type="text"
             placeholder="Full name"
