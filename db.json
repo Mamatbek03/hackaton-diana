@@ -3,7 +3,7 @@
     {
       "name": "hHhhH",
       "gender": "h",
-      "size": null,
+      "size": 555,
       "color": "hh",
       "price": null,
       "description": "h",
@@ -71,9 +71,21 @@
       "price": null,
       "description": "gg",
       "image": "g",
-      "like": 0,
+      "like": 1,
       "comments": [],
       "id": 6
+    },
+    {
+      "name": "ghj",
+      "gender": "hj",
+      "size": null,
+      "color": "hj",
+      "price": 5678,
+      "description": "ghjkl",
+      "image": "fghj",
+      "like": 0,
+      "comments": [],
+      "id": 7
     }
   ]
 }
