@@ -11,8 +11,10 @@ import { useCart } from "../../../contexts/CartContextProvider";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
+import { ADMIN } from "../../../helpers/consts";
+import { useAuth } from "../../../contexts/AuthContextProvider";
 import { useEffect } from "react";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 
 export default function ProductCard({ product }) {
   // const [flag, setFlag] = useState(true);
@@ -28,6 +30,10 @@ export default function ProductCard({ product }) {
     productForEdit,
   } = useProduct();
   const { addProductToCart, checkProductInCart } = useCart();
+
+  const {
+    user: { email },
+  } = useAuth();
   const [changeProduct, setChangeProduct] = useState(productForEdit);
   useEffect(() => {
     getProductForEdit(product.id);
@@ -75,22 +81,29 @@ export default function ProductCard({ product }) {
           >
             Reviews
           </Button>
+
           <IconButton onClick={() => addProductToCart(product)}>
             <AddShoppingCartIcon
               color={checkProductInCart(product.id) ? "primary" : ""}
             />
           </IconButton>
-          <Button
-            onClick={() => {
-              navigate(`/edit/${product.id}`);
-            }}
-            size="small"
-          >
-            Edit
-          </Button>
-          <Button onClick={() => deleteProduct(product.id)} size="small">
-            Delete
-          </Button>
+
+          {email === ADMIN ? (
+            <>
+              {" "}
+              <Button
+                onClick={() => {
+                  navigate(`/edit/${product.id}`);
+                }}
+                size="small"
+              >
+                Edit
+              </Button>
+              <Button onClick={() => deleteProduct(product.id)} size="small">
+                Delete
+              </Button>
+            </>
+          ) : null}
         </CardActions>
       </Card>
     </Container>

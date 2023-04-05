@@ -1,6 +1,17 @@
 {
   "products": [
     {
+<<<<<<< HEAD
+      "name": "ghjk",
+      "gender": "hnjk",
+      "size": null,
+      "color": "hyui",
+      "price": 890,
+      "description": "ghjk",
+      "image": "tyui",
+      "like": 1,
+      "comments": [],
+=======
       "name": "nike",
       "gender": "woman",
       "size": 37,
@@ -12,34 +23,44 @@
       "comments": [
         "very goooood"
       ],
+>>>>>>> 6a60d5f4c0022a523f67a7863a67489b806a36fd
       "id": 1
     },
     {
-      "name": "hqhhqh",
-      "gender": "",
+      "name": "d",
+      "gender": "j",
       "size": null,
-      "color": "h",
+      "color": "j",
       "price": null,
-      "description": "h",
-      "image": "h",
-      "like": 0,
+      "description": "j",
+      "image": "j",
+      "like": 1,
       "comments": [],
       "id": 2
     },
     {
-      "name": "hqhhqh",
-      "gender": "",
+      "name": "f",
+      "gender": "gg",
       "size": null,
-      "color": "h",
+      "color": "g",
       "price": null,
-      "description": "h",
-      "image": "h",
+      "description": "g",
+      "image": "g",
       "like": 0,
-      "comments": [
-        "dxfcgjhkm",
-        "very goob "
-      ],
+      "comments": [],
       "id": 3
+    },
+    {
+      "name": "fghjkl;'",
+      "gender": "dfghjuk",
+      "size": null,
+      "color": "jkl;'",
+      "price": null,
+      "description": "ghjkl",
+      "image": "ghjkl",
+      "like": 0,
+      "comments": [],
+      "id": 4
     }
   ]
 }

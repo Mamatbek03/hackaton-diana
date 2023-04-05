@@ -101,7 +101,6 @@ const Navbar = () => {
         >
           <ShoppingCartCheckoutIcon onClick={() => navigate("/cart")} />
         </Badge>
-        <AuthGoogle />
 
         {email ? (
           <Button onClick={logout} sx={{ my: 2, display: "block" }}>
